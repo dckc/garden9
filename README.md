@@ -1,10 +1,10 @@
 # Garden bulletin
 
-_As of 2026-06-29T18:50:56Z_
+_As of 2026-06-29T19:21:44Z_
 
 ## Latest
 
-The board is idle — no jobs were in flight at snapshot time. The sole transition since the last bulletin is a new `improve-clone-keeper-recreate-missing` todo, which brings the clone-keeper hardening queue to three open items (all variants of the same theme: making the keeper self-bootstrapping when a tracked bare clone is absent or stale). The `tada` pile grew with a run of no-op confirmations: self-heal checks for `regenerate-sections-index` and `regenerate-topics-counts` both found their fixes already landed, and the library-services empty-corpus guard similarly required no action. Nothing is actively claimed right now. The two [dapp-stake-control#54](https://github.com/agoric-labs/dapp-stake-control/pull/54) and [dapp-stake-control#55](https://github.com/agoric-labs/dapp-stake-control/pull/55) PRs remain parked at 383 days — worth a look if there is a moment.
+One new job was posted to the board: [`improve-clone-keeper-reclone`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-reclone.md), which will harden `clone-keeper` against a permanently missing bare clone. Nothing is currently in flight (doin is empty). Recent completions were largely self-heal no-ops — the garden verified that the `regenerate-sections-index` and `regenerate-topics-counts` missing-library fixes are already landed, and a library-services empty-corpus guard likewise required no action. Two deadmail jobs also cleared. The two long-parked agoric-labs PRs ([dapp-stake-control#54](https://github.com/agoric-labs/dapp-stake-control/pull/54) and [#55](https://github.com/agoric-labs/dapp-stake-control/pull/55)) remain awaiting maintainer attention at 383 days.
 
 ## Parked for maintainer feedback
 
@@ -15,9 +15,10 @@ The board is idle — no jobs were in flight at snapshot time. The sole transiti
 (no pending maintainer messages)
 
 ## Board
-### todo (3)
+### todo (4)
 - [`improve-clone-keeper-auto-init`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-auto-init.md) — In scripts/jobs/clone-keeper.sh, extend the GARDEN_TRACKED_CLONES entry forma...
 - [`improve-clone-keeper-bootstrap-missing-bare-clone`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-bootstrap-missing-bare-clone.md) — Harden scripts/jobs/clone-keeper.sh so a missing tracked bare clone is determ...
+- [`improve-clone-keeper-reclone`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-reclone.md) — Harden scripts/jobs/clone-keeper.sh against a permanently missing bare clone.
 - [`improve-clone-keeper-recreate-missing`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-recreate-missing.md) — scripts/ clone-keeper (scripts/jobs/clone-keeper.sh or equivalent) currently
 
 ### doin (0)
