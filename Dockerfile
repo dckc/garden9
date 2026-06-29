@@ -22,7 +22,6 @@ ARG NODE_MAJOR=22
 ARG GO_VERSION=1.23.6
 ARG DOTFILES_REPO=https://github.com/kriskowal/dotfiles.git
 ARG VUNDLE_REPO=https://github.com/VundleVim/Vundle.vim.git
-ARG USERNAME=dckc
 
 ENV DEBIAN_FRONTEND=noninteractive
 
