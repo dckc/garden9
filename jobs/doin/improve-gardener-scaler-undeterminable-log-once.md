@@ -1,7 +1,0 @@
-In `scripts/jobs/gardener-scaler.sh` (around line 40), the "desired gardeners undeterminable" WARN fires on every tick when `hosts/<host>` is missing/unparsable — a structurally steady state, not a transient — flooding `journalctl` (~30+ times/hour on host g9). Keep the no-op behavior, but stop re-logging the same steady state every tick: log the WARN only on transition (i.e. first occurrence / when the determinability state changes), using a small marker under `$GARDEN_STATE` (e.g. `scaler/last-undeterminable-<host>`) so a missing worker-count signal warns once and then stays silent until it resolves. This restores silent-until-error for un-armed hosts.
-
----
-claim:
-  host: g9
-  gardener: 1
-  claimed_at: 2026-06-29T15:51:29Z
