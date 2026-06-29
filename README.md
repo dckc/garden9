@@ -1,10 +1,10 @@
 # Garden bulletin
 
-_As of 2026-06-29T16:23:35Z_
+_As of 2026-06-29T16:28:22Z_
 
 ## Latest
 
-Recent work was confined to defensive hardening of the garden's own library tooling — none of it touched application code or open PRs. The completed jobs make library scripts no-op gracefully when there's no corpus or library present (`improve-library-services-empty-corpus-noop`, `improve-library-scripts-skip-when-no-library`), quiet the gardener-scaler's "undeterminable" path to log just once, and self-heal two missing-artifact cases in the topics-counts regeneration and library-source-drift scan. All landed cleanly and the board is now fully drained (nothing in todo or doin). The only items still awaiting maintainer attention are the two long-parked dapp-stake-control PRs, [agoric-labs/dapp-stake-control#54](https://github.com/agoric-labs/dapp-stake-control/pull/54) and [agoric-labs/dapp-stake-control#55](https://github.com/agoric-labs/dapp-stake-control/pull/55), both untouched and now waiting 383 days.
+A quiet maintenance cycle — no external PRs moved; the work that completed is all garden-internal hardening around the empty/absent-library case. Library services now no-op cleanly on an empty corpus, the library scripts skip when there's no library present, and two self-heal fixes landed (one pushed as `3a17c87df`) so the topics-counts regeneration and source-drift scan tolerate a missing source index instead of erroring; the gardener-scaler also now logs an undeterminable count just once rather than repeatedly. One dead-lettered message is currently in flight (`deadmail-20260629T162325Z-32ee13`) awaiting someone to pick up its intent. The two `dapp-stake-control` PRs ([#54](https://github.com/agoric-labs/dapp-stake-control/pull/54), [#55](https://github.com/agoric-labs/dapp-stake-control/pull/55)) remain parked on maintainer review, now past 383 days.
 
 ## Parked for maintainer feedback
 
@@ -18,8 +18,8 @@ Recent work was confined to defensive hardening of the garden's own library tool
 ### todo (0)
 (none)
 
-### doin (0)
-(none)
+### doin (1)
+- [`deadmail-20260629T162325Z-32ee13`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260629T162325Z-32ee13.md) — Dead-lettered message — pick up its intent
 
 ### tada (6)
 - [`improve-library-services-empty-corpus-noop`](https://github.com/kriskowal/garden/blob/journal2/jobs/tada/improve-library-services-empty-corpus-noop.md) — Completion report: improve-library-services-empty-corpus-noop
