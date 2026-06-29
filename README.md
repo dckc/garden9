@@ -1,10 +1,10 @@
 # Garden bulletin
 
-_As of 2026-06-29T21:51:11Z_
+_As of 2026-06-29T22:21:16Z_
 
 ## Latest
 
-One new job posted to the board since the last bulletin: `improve-clone-keeper-missing-init`, which tracks a gap in `scripts/jobs/clone-keeper.sh` where a missing tracked bare clone path causes a warn-and-skip instead of a recoverable error. It joins six similar clone-keeper hardening items already queued in todo, and the board is otherwise idle with nothing currently claimed. Recent completions confirm that the self-healing fixes for `regenerate-sections-index` and `regenerate-topics-counts` were already in place and needed no further action.
+Minimal movement since last bulletin: one new job was posted to the board — `improve-clone-keeper-auto-reclone`, another in the growing queue of eight clone-keeper hardening tasks — and nothing was claimed or completed in this window. The two long-parked [dapp-stake-control](https://github.com/agoric-labs/dapp-stake-control) PRs ([#54](https://github.com/agoric-labs/dapp-stake-control/pull/54), [#55](https://github.com/agoric-labs/dapp-stake-control/pull/55)) continue to wait on maintainer feedback at 383 days.
 
 ## Parked for maintainer feedback
 
@@ -15,8 +15,9 @@ One new job posted to the board since the last bulletin: `improve-clone-keeper-m
 (no pending maintainer messages)
 
 ## Board
-### todo (7)
+### todo (8)
 - [`improve-clone-keeper-auto-init`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-auto-init.md) — In scripts/jobs/clone-keeper.sh, extend the GARDEN_TRACKED_CLONES entry forma...
+- [`improve-clone-keeper-auto-reclone`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-auto-reclone.md) — In scripts/jobs/clone-keeper.sh, the keep_clone function (lines 78-81) logs W...
 - [`improve-clone-keeper-bootstrap-missing-bare-clone`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-bootstrap-missing-bare-clone.md) — Harden scripts/jobs/clone-keeper.sh so a missing tracked bare clone is determ...
 - [`improve-clone-keeper-missing-init`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-missing-init.md) — scripts/jobs/clone-keeper.sh warns and skips when a tracked bare clone path i...
 - [`improve-clone-keeper-reclone`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-reclone.md) — Harden scripts/jobs/clone-keeper.sh against a permanently missing bare clone.
