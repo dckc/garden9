@@ -36,9 +36,26 @@ fi
 # in-flight handler: install-units.sh scale gates `disable --now` on the busy
 # marker, deferring a mid-job gardener to a later tick — but a structurally-absent
 # signal must still not trigger that path at all.)
+#
+# A missing worker-count signal is a structurally steady state on an un-armed
+# host, not a transient: warning every tick floods journalctl (~30+/hour). So log
+# the WARN only on TRANSITION into the undeterminable state, tracked by a marker
+# under $GARDEN_STATE. The marker exists exactly while we are silently no-op'ing;
+# resolving the signal clears it so the next lapse warns once again.
+undet_marker="$GARDEN_STATE/scaler/last-undeterminable-$host"
 if [ -z "$want" ]; then
-  log "WARN host '$host' desired gardeners undeterminable (missing/unparsable hosts/$host); leaving pool unchanged"
+  if [ ! -e "$undet_marker" ]; then
+    log "WARN host '$host' desired gardeners undeterminable (missing/unparsable hosts/$host); leaving pool unchanged (silencing until resolved)"
+    mkdir -p "$(dirname "$undet_marker")" 2>/dev/null || true
+    : > "$undet_marker" 2>/dev/null || true
+  fi
   exit 0
+fi
+# Signal is determinable again: clear the marker (and note the recovery) so a
+# future lapse transitions back into a single fresh WARN.
+if [ -e "$undet_marker" ]; then
+  log "host '$host' desired gardeners signal resolved; resuming"
+  rm -f "$undet_marker" 2>/dev/null || true
 fi
 log "host '$host' desired gardeners: $want"
 
