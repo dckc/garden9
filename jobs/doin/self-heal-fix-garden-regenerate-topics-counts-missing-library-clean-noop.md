@@ -1,1 +1,7 @@
 In `scripts/jobs/regenerate-topics-counts.sh`, the `--land` block (line 240) does `[ -d "$LIB/topics" ] || die "no library/topics in the synced clone at $DIR"`, which exits 1 and FAILS the service on every tick for any garden instance whose `journal2` branch carries no `library/` corpus (confirmed here: the `dckc` instance's journal2 at origin tip has no `library/` in tree or history). A regeneration tool with no corpus to regenerate has nothing to land — this is a clean no-op, not a fatal error. Replace the `die` at line 240 with a clean skip: `[ -d "$LIB/topics" ] || { log "tip: no library/topics in this instance's journal2 — nothing to regenerate"; exit 0; }`, mirroring the existing "already current; nothing to land" exit-0 path. Apply the identical fix to the sibling `scripts/jobs/regenerate-sections-index.sh` line that reads `[ -d "$LIB/sections" ] || die "no library/sections in the synced clone at $DIR"` (it shares the bug and is restart-looping for the same reason). Do NOT touch the `--check`/`--print` `locate_library` paths (exit 2 there is a correct "pass --library" setup error for interactive use); only the autonomous `--land` path should degrade a missing corpus to a quiet exit 0. Failure signature: `<3> [regenerate-topics-counts] FATAL: no library/topics in the synced clone at /home/dckc/.garden-state/regenerate-topics-counts/journal`, exit code 1.
+
+---
+claim:
+  host: g9
+  gardener: 1
+  claimed_at: 2026-06-29T16:18:53Z
