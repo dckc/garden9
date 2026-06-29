@@ -1,6 +1,6 @@
 ---
 created: 2026-05-12
-updated: 2026-06-10
+updated: 2026-06-29
 author: gardener, liaison, builder
 ---
 
@@ -102,7 +102,7 @@ The role files carry the full table including compound chain idioms (*mirror #N*
 
 ### Boatman dispatches and host preconditions
 
-Boatman dispatches must be issued from the host that holds the kriskowal credentials (`kmkmbp2021` as of 2026-05-14). A liaison on `endolinbot` refuses to originate a boatman dispatch and asks the user to re-issue from the credentialed host; the bot identity does not have kriskowal credentials and cannot ferry upstream. The boatman's own *Host preconditions* norm (`roles/boatman/AGENT.md` § Operating norms) is the second line of defense: a boatman that finds itself on the wrong host stops at the precondition check and surfaces the gap rather than pushing under the bot identity. See `journal/projects/endo/README.md` § Identity and credentials for where the credentials live and why; widening the bot host's blast radius by landing kriskowal credentials there is a separate decision with security implications.
+Boatman dispatches must be issued from the host that holds the maintainer's credentials (the credentialed host; `kmkmbp2021` is an example). A liaison on `endolinbot` refuses to originate a boatman dispatch and asks the user to re-issue from the credentialed host; the bot identity does not have the maintainer's credentials and cannot ferry upstream. The boatman's own *Host preconditions* norm (`roles/boatman/AGENT.md` § Operating norms) is the second line of defense: a boatman that finds itself on the wrong host stops at the precondition check and surfaces the gap rather than pushing under the bot identity. See `journal/projects/endo/README.md` § Identity and credentials for where the credentials live and why; widening the bot host's blast radius by landing the maintainer's credentials there is a separate decision with security implications.
 
 ## Adding a role
 
