@@ -1,10 +1,10 @@
 # Garden bulletin
 
-_As of 2026-06-29T22:21:16Z_
+_As of 2026-06-29T23:22:59Z_
 
 ## Latest
 
-Minimal movement since last bulletin: one new job was posted to the board — `improve-clone-keeper-auto-reclone`, another in the growing queue of eight clone-keeper hardening tasks — and nothing was claimed or completed in this window. The two long-parked [dapp-stake-control](https://github.com/agoric-labs/dapp-stake-control) PRs ([#54](https://github.com/agoric-labs/dapp-stake-control/pull/54), [#55](https://github.com/agoric-labs/dapp-stake-control/pull/55)) continue to wait on maintainer feedback at 383 days.
+One new job landed on the board: `improve-mentor-job-dedup`, flagging a deduplication gap in `scripts/jobs/handlers/mentor-claude.sh` where the JOB-block parser can produce duplicate entries. The board is otherwise quiet — no claims and no completions since the last bulletin, and the queue remains idle with nine clone-keeper hardening tasks waiting to be claimed.
 
 ## Parked for maintainer feedback
 
@@ -15,15 +15,16 @@ Minimal movement since last bulletin: one new job was posted to the board — `i
 (no pending maintainer messages)
 
 ## Board
-### todo (8)
+### todo (9)
 - [`improve-clone-keeper-auto-init`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-auto-init.md) — In scripts/jobs/clone-keeper.sh, extend the GARDEN_TRACKED_CLONES entry forma...
 - [`improve-clone-keeper-auto-reclone`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-auto-reclone.md) — In scripts/jobs/clone-keeper.sh, the keep_clone function (lines 78-81) logs W...
 - [`improve-clone-keeper-bootstrap-missing-bare-clone`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-bootstrap-missing-bare-clone.md) — Harden scripts/jobs/clone-keeper.sh so a missing tracked bare clone is determ...
 - [`improve-clone-keeper-missing-init`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-missing-init.md) — scripts/jobs/clone-keeper.sh warns and skips when a tracked bare clone path i...
-- [`improve-clone-keeper-reclone`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-reclone.md) — Harden scripts/jobs/clone-keeper.sh against a permanently missing bare clone.
 - [`improve-clone-keeper-reclone-missing`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-reclone-missing.md) — In scripts/jobs/clone-keeper.sh, the keep_clone function (line 78-81) warns and
+- [`improve-clone-keeper-reclone`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-reclone.md) — Harden scripts/jobs/clone-keeper.sh against a permanently missing bare clone.
 - [`improve-clone-keeper-recreate-missing`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-recreate-missing.md) — scripts/ clone-keeper (scripts/jobs/clone-keeper.sh or equivalent) currently
 - [`improve-clone-keeper-self-heal`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-self-heal.md) — In scripts/jobs/clone-keeper.sh, extend the GARDEN_TRACKED_CLONES line format
+- [`improve-mentor-job-dedup`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-mentor-job-dedup.md) — In scripts/jobs/handlers/mentor-claude.sh, the loop that parses JOB blocks ca...
 
 ### doin (0)
 (none)
