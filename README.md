@@ -1,10 +1,10 @@
 # Garden bulletin
 
-_As of 2026-06-29T16:19:10Z_
+_As of 2026-06-29T16:20:08Z_
 
 ## Latest
 
-Recent activity is all garden self-maintenance, not feature work. Four hardening jobs landed: the library-source-drift scan and the sections-index regeneration now skip cleanly when no library is present, library scripts skip when there's no library to act on, and the gardener-scaler logs once rather than repeatedly when it can't determine a count (the sections-index fix pushed to `main2` as `0e6cb28f3`). One more self-heal is in progress — making the `--land` path of `regenerate-topics-counts.sh` a clean no-op when the library is missing. No external PRs moved; the two `dapp-stake-control` reviews ([#54](https://github.com/agoric-labs/dapp-stake-control/pull/54) and [#55](https://github.com/agoric-labs/dapp-stake-control/pull/55)) remain parked on maintainer feedback, now past a year of waiting.
+Only garden-internal self-healing and script-hardening work landed this cycle. The lone board transition completed `self-heal-fix-garden-regenerate-topics-counts-missing-library-clean-noop`, joining a small batch of recently finished maintenance jobs that all make library-dependent scripts degrade gracefully when no library is present: the regenerate-topics-counts, library-source-drift-scan, and regenerate-sections-index self-heals now no-op or skip cleanly, the library scripts skip when there's no library, and the gardener-scaler logs once rather than repeatedly when it can't determine a count. The board is otherwise idle (nothing in todo or doin), and the only items awaiting maintainer attention remain the two long-parked dapp-stake-control PRs, [agoric-labs/dapp-stake-control#54](https://github.com/agoric-labs/dapp-stake-control/pull/54) and [agoric-labs/dapp-stake-control#55](https://github.com/agoric-labs/dapp-stake-control/pull/55), both now past 383 days waiting.
 
 ## Parked for maintainer feedback
 
@@ -18,10 +18,11 @@ Recent activity is all garden self-maintenance, not feature work. Four hardening
 ### todo (0)
 (none)
 
-### doin (1)
-- [`self-heal-fix-garden-regenerate-topics-counts-missing-library-clean-noop`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/self-heal-fix-garden-regenerate-topics-counts-missing-library-clean-noop.md) — In scripts/jobs/regenerate-topics-counts.sh, the --land block (line 240) does...
+### doin (0)
+(none)
 
-### tada (4)
+### tada (5)
+- [`self-heal-fix-garden-regenerate-topics-counts-missing-library-clean-noop`](https://github.com/kriskowal/garden/blob/journal2/jobs/tada/self-heal-fix-garden-regenerate-topics-counts-missing-library-clean-noop.md) — Pushed cleanly as 3a17c87df.
 - [`self-heal-fix-garden-library-source-drift-scan-missing-source-index-noop`](https://github.com/kriskowal/garden/blob/journal2/jobs/tada/self-heal-fix-garden-library-source-drift-scan-missing-source-index-noop.md) — Completion report
 - [`improve-library-scripts-skip-when-no-library`](https://github.com/kriskowal/garden/blob/journal2/jobs/tada/improve-library-scripts-skip-when-no-library.md) — Completion report
 - [`improve-gardener-scaler-undeterminable-log-once`](https://github.com/kriskowal/garden/blob/journal2/jobs/tada/improve-gardener-scaler-undeterminable-log-once.md) — Completion report
