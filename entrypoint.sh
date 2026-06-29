@@ -3,8 +3,8 @@
 #
 # Runs as root inside the garden container. Before handing PID 1 to
 # systemd it:
-#   1. Symlinks dotfiles from /opt/dotfiles into /home/kris.
-#   2. Prepares /home/kris/.config/systemd/user/ owned by kris, so
+#   1. Symlinks dotfiles from /opt/dotfiles into /home/dckc.
+#   2. Prepares /home/dckc/.config/systemd/user/ owned by dckc, so
 #      `systemctl --user enable` (run later by scripts/jobs/install-units.sh)
 #      can write its default.target.wants/ links and the units survive a
 #      container restart.
@@ -19,7 +19,7 @@
 set -e
 
 DOTFILES=/opt/dotfiles
-HOME_DIR=/home/kris
+HOME_DIR=/home/dckc
 SYSTEMD_USER_DIR="${HOME_DIR}/.config/systemd/user"
 
 link_if_safe() {
@@ -40,15 +40,15 @@ if [[ -d "$DOTFILES" ]]; then
     link_if_safe "$DOTFILES/zshrc"         "$HOME_DIR/.zshrc"
     mkdir -p "$HOME_DIR/.config/git"
     link_if_safe "$DOTFILES/git/.gitconfig" "$HOME_DIR/.config/git/config"
-    chown -h kris:kris \
+    chown -h dckc:dckc \
         "$HOME_DIR/.bashrc" "$HOME_DIR/.bash_profile" "$HOME_DIR/.vimrc" \
         "$HOME_DIR/.vimrc.local" "$HOME_DIR/.vim" "$HOME_DIR/.tmux.conf" \
         "$HOME_DIR/.tigrc" "$HOME_DIR/.zshrc" "$HOME_DIR/.config/git/config" \
         2>/dev/null || true
 fi
 
-# Prepare the user-systemd tree (must be kris-owned for `--user enable`).
+# Prepare the user-systemd tree (must be dckc-owned for `--user enable`).
 mkdir -p "$SYSTEMD_USER_DIR"
-chown -R kris:kris "$HOME_DIR/.config/systemd" 2>/dev/null || true
+chown -R dckc:dckc "$HOME_DIR/.config/systemd" 2>/dev/null || true
 
 exec "$@"
