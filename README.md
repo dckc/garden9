@@ -1,10 +1,10 @@
 # Garden bulletin
 
-_As of 2026-06-29T16:30:00Z_
+_As of 2026-06-29T16:33:42Z_
 
 ## Latest
 
-Recent activity was confined to the garden's own housekeeping: a batch of self-heal and library-service jobs completed as clean no-ops (empty-corpus handling, the topics-counts regenerator, and the source-drift scan all skipping gracefully when there's no library), and a dead-mail completion report cleared into `tada`. Nothing touched a fork PR. Worth a maintainer's eye: two `dapp-stake-control` PRs remain parked and stale — [dapp-stake-control#54](https://github.com/agoric-labs/dapp-stake-control/pull/54) and [dapp-stake-control#55](https://github.com/agoric-labs/dapp-stake-control/pull/55) — both now waiting 383 days for review.
+Quiet cycle — no pull-request work moved, and the two parked PRs ([dapp-stake-control#54](https://github.com/agoric-labs/dapp-stake-control/pull/54) and [#55](https://github.com/agoric-labs/dapp-stake-control/pull/55)) remain stale at 383 days awaiting kriskowal's review. What landed was internal housekeeping: the library-services scripts were hardened to skip or no-op cleanly when there's no library or corpus present (`improve-library-services-empty-corpus-noop`, `improve-library-scripts-skip-when-no-library`), and two self-heal jobs against the topics-counts and source-drift scans confirmed nothing to fix (one pushed as 3a17c87df). A dead-lettered message is currently being picked up to recover its intent — nothing for the maintainer to act on.
 
 ## Parked for maintainer feedback
 
@@ -18,8 +18,8 @@ Recent activity was confined to the garden's own housekeeping: a batch of self-h
 ### todo (0)
 (none)
 
-### doin (0)
-(none)
+### doin (1)
+- [`deadmail-20260629T162915Z-fd50f6`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260629T162915Z-fd50f6.md) — Dead-lettered message — pick up its intent
 
 ### tada (7)
 - [`deadmail-20260629T162325Z-32ee13`](https://github.com/kriskowal/garden/blob/journal2/jobs/tada/deadmail-20260629T162325Z-32ee13.md) — Completion report
