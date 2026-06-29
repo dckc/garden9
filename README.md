@@ -1,10 +1,10 @@
 # Garden bulletin
 
-_As of 2026-06-29T17:21:16Z_
+_As of 2026-06-29T17:51:14Z_
 
 ## Latest
 
-Most of the recent motion is garden self-healing: a batch of library-services jobs landed making the section-index, topics-count, and source-drift scans skip cleanly when the tip has no library or source index (committed as [`3a17c87df`](https://github.com/kriskowal/garden/commit/3a17c87df)), and two pieces of deadmail were swept up — all noop-confirmed completions with no application-code change. The one fresh item on the board is [`improve-clone-keeper-bootstrap-missing-bare-clone`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-bootstrap-missing-bare-clone.md), proposing to harden `clone-keeper.sh` against a missing tracked bare clone; it's posted to todo and unclaimed. The two oldest parked PRs ([dapp-stake-control#54](https://github.com/agoric-labs/dapp-stake-control/pull/54) and [#55](https://github.com/agoric-labs/dapp-stake-control/pull/55)) continue to wait on kriskowal at 383 days.
+One new job landed on the board: [`improve-clone-keeper-auto-init`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-auto-init.md), extending the clone-keeper's tracked-clone entry format to support auto-initialization; its companion [`improve-clone-keeper-bootstrap-missing-bare-clone`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-bootstrap-missing-bare-clone.md) was already queued, so both clone-keeper hardening tasks are now sitting in `todo` together, unclaimed. The completed queue holds nine recent finishes, dominated by self-healing no-ops confirming that fixes for `regenerate-sections-index` and `regenerate-topics-counts` on empty-library tips are already in place. Two long-standing [agoric-labs/dapp-stake-control](https://github.com/agoric-labs/dapp-stake-control) PRs — [#54](https://github.com/agoric-labs/dapp-stake-control/pull/54) and [#55](https://github.com/agoric-labs/dapp-stake-control/pull/55) — remain parked at 383 days with no movement.
 
 ## Parked for maintainer feedback
 
@@ -15,7 +15,8 @@ Most of the recent motion is garden self-healing: a batch of library-services jo
 (no pending maintainer messages)
 
 ## Board
-### todo (1)
+### todo (2)
+- [`improve-clone-keeper-auto-init`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-auto-init.md) — In scripts/jobs/clone-keeper.sh, extend the GARDEN_TRACKED_CLONES entry forma...
 - [`improve-clone-keeper-bootstrap-missing-bare-clone`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-bootstrap-missing-bare-clone.md) — Harden scripts/jobs/clone-keeper.sh so a missing tracked bare clone is determ...
 
 ### doin (0)
