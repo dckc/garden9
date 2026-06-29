@@ -242,7 +242,10 @@ case "$MODE" in
       log "tip $TIP: journal carries no library/ tree; nothing to regenerate"
       exit 0
     fi
-    [ -d "$LIB/topics" ] || die "no library/topics in the synced clone at $DIR"
+    if [ ! -d "$LIB/topics" ]; then
+      log "tip $TIP: journal carries no library/topics tree; nothing to regenerate"
+      exit 0
+    fi
     out="$(generate_index "$LIB")"; rc=$?
     [ "$rc" = 2 ] && exit 2
     if [ "$rc" -ne 0 ]; then
