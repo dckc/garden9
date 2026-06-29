@@ -92,7 +92,13 @@ POST_JOB="$HERE/post-job.sh"
 ensure_clone "$DIR"
 sync_clone "$DIR"
 README="$DIR/library/sources/README.md"
-[ -f "$README" ] || die "no library/sources/README.md in the synced clone at $DIR (tip has no source index?)"
+# A tip with no source index is a benign steady state on instances that do not
+# carry the reference-library corpus: there is simply nothing to audit. Skip-and-
+# log (never fail) just as the per-row branch below does for a missing bare clone.
+if [ ! -f "$README" ]; then
+  log "no library/sources/README.md at origin/$JOURNAL_BRANCH tip; nothing to audit"
+  exit 0
+fi
 TIP="$(git -C "$DIR" rev-parse --short HEAD 2>/dev/null || echo '?')"
 log "scanning library/sources at origin/$JOURNAL_BRANCH tip $TIP ${DRYRUN:+ }$([ "$DRYRUN" = 1 ] && echo '(dry-run)')"
 

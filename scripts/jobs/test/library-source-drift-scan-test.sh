@@ -98,6 +98,25 @@ setup_fixture() {  # setup_fixture [--drift]
   seed_board "$SHA_CURRENT" "$SHA_DRIFT_OLD"
 }
 
+# Seed a journal2 tip that carries NO library/ tree at all — the benign steady
+# state on instances that do not host the reference-library corpus. There is no
+# source index to audit, so the scan must skip-and-log (exit 0), not fail.
+seed_board_no_sources() {
+  rm -rf "$TR/seed"; local SEED="$TR/seed"; git init -q "$SEED"
+  git -C "$SEED" checkout -q -b journal2
+  mkdir -p "$SEED/jobs/todo" "$SEED/jobs/doin" "$SEED/jobs/tada"
+  : > "$SEED/jobs/todo/.gitkeep"; : > "$SEED/jobs/doin/.gitkeep"; : > "$SEED/jobs/tada/.gitkeep"
+  git -C "$SEED" add -A; git -C "$SEED" "${git_id[@]}" commit -q -m seed-no-sources
+  git -C "$SEED" remote add origin "$BARE"; git -C "$SEED" push -q -u origin journal2
+  rm -rf "$SEED"
+}
+
+setup_fixture_no_sources() {
+  rm -rf "$TR"; mkdir -p "$TR"
+  git init -q --bare "$BARE"
+  seed_board_no_sources
+}
+
 # Read the committed jobs/todo set from the board origin (post-job pushed there).
 board_todo() { git -C "$BARE" ls-tree -r --name-only journal2 -- jobs/todo 2>/dev/null; }
 
@@ -165,6 +184,14 @@ hr; echo "DRY-RUN CLEAN — current corpus exits 0"; hr
 setup_fixture
 run_scan --dry-run
 [ "$RC" -eq 0 ] && ok "dry-run exits 0 on a current corpus" || bad "dry-run exit $RC (want 0)"
+
+# ============================================================================
+hr; echo "NO SOURCE INDEX — tip carries no library/sources/README.md: clean no-op"; hr
+setup_fixture_no_sources
+run_scan
+[ "$RC" -eq 0 ] && ok "exit 0 when the tip has no source index" || bad "exit $RC (want 0)"
+[ -z "$(board_todo | grep -F scholar-refresh || true)" ] && ok "posted no jobs with no source index" || bad "posted a job with no source index: $(board_todo)"
+grep -q "no library/sources/README.md at origin/journal2 tip; nothing to audit" <<<"$OUT" && ok "logged the nothing-to-audit no-op" || bad "did not log the no-op skip: $OUT"
 
 # ============================================================================
 hr
