@@ -10,6 +10,16 @@
 
 set -euo pipefail
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+# Print the leading comment block as usage (mirrors journal-entry.sh).
+usage() { awk 'NR>1 && /^#/{sub(/^# ?/,"");print;next} NR>1{exit}' "$0"; }
+
+# -h/--help is a query, not a message: print usage and exit without sending.
+# Before this guard, `message-user.sh --help` sent an empty message to the
+# maintainer with reply_to=--help and from=gardener:--help, which dead-lettered
+# (no live maintainer inbox) and was promoted into a spurious gardener job.
+case "${1:-}" in -h|--help) usage; exit 0 ;; esac
+
 doer="${1:?usage: message-user.sh <reply-to-doer> [body-file]}"
 body="${2:-}"
 export GARDEN_REPLY_TO="$doer"

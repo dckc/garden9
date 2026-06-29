@@ -22,6 +22,14 @@ HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 source "$HERE/common.sh"
 GARDEN_TAG="inbox-send"
 
+# Print the leading comment block as usage (mirrors journal-entry.sh).
+usage() { awk 'NR>1 && /^#/{sub(/^# ?/,"");print;next} NR>1{exit}' "$0"; }
+
+# -h/--help is a query, not a send: print usage and exit before consuming the
+# positional, so `inbox-send.sh --help` cannot post an empty message to a doer
+# literally named '--help' (or dead-letter one).
+case "${1:-}" in -h|--help) usage; exit 0 ;; esac
+
 doer="${1:?usage: inbox-send.sh <doer> [body-file]}"
 body_src="${2:-}"
 case "$doer" in */*|.*|'') die "illegal doer '$doer'";; esac

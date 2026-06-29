@@ -19,6 +19,14 @@ HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 source "$HERE/common.sh"
 GARDEN_TAG="send"
 
+# Print the leading comment block as usage (mirrors journal-entry.sh).
+usage() { awk 'NR>1 && /^#/{sub(/^# ?/,"");print;next} NR>1{exit}' "$0"; }
+
+# -h/--help is a query, not a broadcast: print usage and exit before consuming
+# the positional, so `send-msg.sh --help` cannot post a message to the illegal
+# address '--help' (it would die anyway, but usage is the right answer).
+case "${1:-}" in -h|--help) usage; exit 0 ;; esac
+
 addr="${1:?usage: send-msg.sh <role/NAME|job/BASE|broadcast> [body-file]}"
 body_src="${2:-}"
 case "$addr" in

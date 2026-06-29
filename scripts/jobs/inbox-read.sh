@@ -14,6 +14,14 @@ HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 # shellcheck source=common.sh
 source "$HERE/common.sh"
 
+# Print the leading comment block as usage (mirrors journal-entry.sh).
+usage() { awk 'NR>1 && /^#/{sub(/^# ?/,"");print;next} NR>1{exit}' "$0"; }
+
+# -h/--help is a query, not a drain: print usage and exit before consuming the
+# positional, so `inbox-read.sh --help` cannot provision a stray journal clone
+# for a doer literally named '--help'.
+case "${1:-}" in -h|--help) usage; exit 0 ;; esac
+
 doer="${1:?usage: inbox-read.sh <doer>}"
 GARDEN_TAG="inbox-read/$doer"
 DIR="${GARDEN_INBOX_CLONE:-$GARDEN_STATE/inbox/$doer/journal}"
