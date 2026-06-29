@@ -1,10 +1,10 @@
 # Garden bulletin
 
-_As of 2026-06-29T16:20:08Z_
+_As of 2026-06-29T16:22:23Z_
 
 ## Latest
 
-Only garden-internal self-healing and script-hardening work landed this cycle. The lone board transition completed `self-heal-fix-garden-regenerate-topics-counts-missing-library-clean-noop`, joining a small batch of recently finished maintenance jobs that all make library-dependent scripts degrade gracefully when no library is present: the regenerate-topics-counts, library-source-drift-scan, and regenerate-sections-index self-heals now no-op or skip cleanly, the library scripts skip when there's no library, and the gardener-scaler logs once rather than repeatedly when it can't determine a count. The board is otherwise idle (nothing in todo or doin), and the only items awaiting maintainer attention remain the two long-parked dapp-stake-control PRs, [agoric-labs/dapp-stake-control#54](https://github.com/agoric-labs/dapp-stake-control/pull/54) and [agoric-labs/dapp-stake-control#55](https://github.com/agoric-labs/dapp-stake-control/pull/55), both now past 383 days waiting.
+Recent work has been a sweep of self-hardening fixes to the garden's own library-maintenance scripts, all landing on `main2`: the topics-counts and sections-index regenerators ([3a17c87df](https://github.com/kriskowal/garden/commit/3a17c87df), [0e6cb28f3](https://github.com/kriskowal/garden/commit/0e6cb28f3)) and the source-drift scan now no-op or skip cleanly when there is no library corpus or source index, rather than dying; the gardener-scaler likewise now logs an undeterminable-count condition just once instead of repeating. A companion job to make `library-source-drift-scan.sh` no-op on an empty corpus is still in progress. Nothing new is parked for review — the two `dapp-stake-control` PRs ([#54](https://github.com/agoric-labs/dapp-stake-control/pull/54), [#55](https://github.com/agoric-labs/dapp-stake-control/pull/55)) remain stale at 383 days awaiting kriskowal.
 
 ## Parked for maintainer feedback
 
@@ -18,8 +18,8 @@ Only garden-internal self-healing and script-hardening work landed this cycle. T
 ### todo (0)
 (none)
 
-### doin (0)
-(none)
+### doin (1)
+- [`improve-library-services-empty-corpus-noop`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-library-services-empty-corpus-noop.md) — Both scripts/jobs/library-source-drift-scan.sh (line 95: die "no library/sour...
 
 ### tada (5)
 - [`self-heal-fix-garden-regenerate-topics-counts-missing-library-clean-noop`](https://github.com/kriskowal/garden/blob/journal2/jobs/tada/self-heal-fix-garden-regenerate-topics-counts-missing-library-clean-noop.md) — Pushed cleanly as 3a17c87df.
