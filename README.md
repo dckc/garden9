@@ -1,10 +1,10 @@
 # Garden bulletin
 
-_As of 2026-06-29T16:39:54Z_
+_As of 2026-06-29T17:21:16Z_
 
 ## Latest
 
-Only routine self-healing moved this cycle: the [`self-heal-fix-garden-regenerate-sections-index-missing-library-clean-noop`](https://github.com/kriskowal/garden/blob/journal2/jobs/tada/self-heal-fix-garden-regenerate-sections-index-missing-library-clean-noop.md) job completed as a confirmed no-op (the fix was already landed), alongside a clutch of other empty-corpus and deadmail completions — no PR-pipeline work and an empty board, so the two long-parked `dapp-stake-control` PRs ([#54](https://github.com/agoric-labs/dapp-stake-control/pull/54), [#55](https://github.com/agoric-labs/dapp-stake-control/pull/55)) remain the only items genuinely awaiting your attention.
+Most of the recent motion is garden self-healing: a batch of library-services jobs landed making the section-index, topics-count, and source-drift scans skip cleanly when the tip has no library or source index (committed as [`3a17c87df`](https://github.com/kriskowal/garden/commit/3a17c87df)), and two pieces of deadmail were swept up — all noop-confirmed completions with no application-code change. The one fresh item on the board is [`improve-clone-keeper-bootstrap-missing-bare-clone`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-bootstrap-missing-bare-clone.md), proposing to harden `clone-keeper.sh` against a missing tracked bare clone; it's posted to todo and unclaimed. The two oldest parked PRs ([dapp-stake-control#54](https://github.com/agoric-labs/dapp-stake-control/pull/54) and [#55](https://github.com/agoric-labs/dapp-stake-control/pull/55)) continue to wait on kriskowal at 383 days.
 
 ## Parked for maintainer feedback
 
@@ -15,8 +15,8 @@ Only routine self-healing moved this cycle: the [`self-heal-fix-garden-regenerat
 (no pending maintainer messages)
 
 ## Board
-### todo (0)
-(none)
+### todo (1)
+- [`improve-clone-keeper-bootstrap-missing-bare-clone`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-bootstrap-missing-bare-clone.md) — Harden scripts/jobs/clone-keeper.sh so a missing tracked bare clone is determ...
 
 ### doin (0)
 (none)
