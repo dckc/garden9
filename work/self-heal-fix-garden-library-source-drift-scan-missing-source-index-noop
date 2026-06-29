@@ -1,0 +1,4 @@
+host: g9
+gardener: 1
+claimed_at: 2026-06-29T16:08:36Z
+worktree_dir: /home/dckc/worktrees/self-heal-fix-garden-library-source-drift-scan-missing-source-index-noop
