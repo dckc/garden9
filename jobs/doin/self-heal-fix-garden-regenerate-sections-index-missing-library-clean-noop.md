@@ -10,3 +10,9 @@ Change it so a tip that carries no `library/sections` tree is treated as a clean
     fi
 
 (Compute `TIP` before this guard, or inline a `git -C "$DIR" rev-parse --short HEAD`.) This makes `garden-regenerate-sections-index` idle quietly on library-less instances and resume real work automatically once a `library/` tree exists, matching the service's own "self-heals on the next tick" design and its idempotent-no-op posture. Apply the same missing-library → clean `exit 0` treatment to the identical `die` in the sibling `scripts/jobs/library-link-scan.sh` (`[ -d "$LIB" ] || die "no library/ in the synced clone ..."`, around line 115), which has the same latent hourly failure on this instance. Do NOT weaken the existing 75/EX_TEMPFAIL transient-outage handling or the dangling/anchor failure exits (those remain real failures).
+
+---
+claim:
+  host: g9
+  gardener: 1
+  claimed_at: 2026-06-29T16:39:02Z
