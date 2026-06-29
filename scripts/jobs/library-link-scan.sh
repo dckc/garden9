@@ -112,8 +112,17 @@ sync_tip() {
   ensure_clone "$DIR"
   sync_clone "$DIR"
   LIB="$DIR/library"
-  [ -d "$LIB" ] || die "no library/ in the synced clone at $DIR (tip has no library tree?)"
   TIP="$(git -C "$DIR" rev-parse --short HEAD 2>/dev/null || echo '?')"
+}
+
+# A tip with no library/ tree is a benign steady state on instances that do not
+# carry the reference-library corpus (non-library hosts): there is simply nothing
+# to scan. Callers that scan the whole corpus invoke this right after sync_tip to
+# log one line and exit 0 rather than treating an absent library as breakage.
+exit_clean_if_no_library() {
+  [ -d "$LIB" ] && return 0
+  log "tip $TIP: journal carries no library/ tree; nothing to scan"
+  exit 0
 }
 
 case "${1:-}" in
@@ -126,6 +135,10 @@ case "${1:-}" in
     case "$want" in -*|'') die "usage: library-link-scan.sh --exists <library-relative-path>";; esac
     sync_tip
     want="${want#library/}"
+    if [ ! -d "$LIB" ]; then
+      log "tip $TIP: journal carries no library/ tree; library/$want MISSING"
+      exit 1
+    fi
     if [ -e "$LIB/$want" ]; then
       log "tip $TIP: library/$want EXISTS"
       exit 0
@@ -136,6 +149,7 @@ case "${1:-}" in
   --)
     shift
     sync_tip
+    exit_clean_if_no_library
     log "scanning at origin/$JOURNAL_BRANCH tip $TIP (passthrough: $*)"
     exec "$CORE" "$@" --library "$LIB" ;;
 
@@ -153,6 +167,7 @@ case "${1:-}" in
       *) die "usage: library-link-scan.sh --actuate [--dry-run]" ;;
     esac
     sync_tip
+    exit_clean_if_no_library
     log "scanning navigation surfaces (actuating) at origin/$JOURNAL_BRANCH tip $TIP ..."
     # Capture rather than exec: we must read the rc and the DANGLING lines. The
     # core never reaches the network and writes nothing, so capturing it is safe.
