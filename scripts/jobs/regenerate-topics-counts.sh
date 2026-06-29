@@ -237,8 +237,12 @@ case "$MODE" in
     ensure_clone "$DIR"
     sync_clone "$DIR"                          # may exit 75 on a transient outage
     LIB="$DIR/library"
-    [ -d "$LIB/topics" ] || die "no library/topics in the synced clone at $DIR"
     TIP="$(git -C "$DIR" rev-parse --short HEAD 2>/dev/null || echo '?')"
+    if [ ! -d "$LIB" ]; then
+      log "tip $TIP: journal carries no library/ tree; nothing to regenerate"
+      exit 0
+    fi
+    [ -d "$LIB/topics" ] || die "no library/topics in the synced clone at $DIR"
     out="$(generate_index "$LIB")"; rc=$?
     [ "$rc" = 2 ] && exit 2
     if [ "$rc" -ne 0 ]; then
