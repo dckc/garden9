@@ -33,7 +33,7 @@ Notes:
   GARDEN_HOSTNAME.
 
   Unlike town, garden does NOT forward SSH_AUTH_SOCK. The bot uses its
-  own keys under \$HOME/.ssh/ (i.e. /home/kris/garden/.ssh on the host)
+  own keys under \$HOME/.ssh/ (i.e. /home/dckc/garden/.ssh on the host)
   so that an agent-forwarded human identity cannot leak into bot actions.
 EOF
     exit 1
@@ -77,20 +77,20 @@ cmd_enter() {
             -v /sys/fs/cgroup:/sys/fs/cgroup:rw \
             --tmpfs /run --tmpfs /run/lock --tmpfs /tmp \
             --stop-signal SIGRTMIN+3 \
-            -v "${SCRIPT_DIR}:/home/kris" \
+            -v "${SCRIPT_DIR}:/home/dckc" \
             "${api_key_args[@]}" \
             "$IMAGE_NAME" >/dev/null
     elif [[ "$(docker container inspect -f '{{.State.Running}}' "$CONTAINER_NAME")" != "true" ]]; then
         docker start "$CONTAINER_NAME" >/dev/null
     fi
 
-    # Drop into the container as kris (uid 1000), NOT root. PID 1 (systemd)
+    # Drop into the container as dckc (uid 1000), NOT root. PID 1 (systemd)
     # must run as root and the ENTRYPOINT owns that, so the image's default
-    # USER stays root; we override it here per-exec. Entering as kris means
-    # the interactive session (and any `claude` it launches) uses kris's
+    # USER stays root; we override it here per-exec. Entering as dckc means
+    # the interactive session (and any `claude` it launches) uses dckc's
     # gh/ssh credentials and manages the garden's `systemctl --user` units
-    # directly — no `sudo -u kris`, and no root-vs-kris credential split.
-    exec docker exec -it -u kris "$CONTAINER_NAME" /bin/bash -l
+    # directly — no `sudo -u dckc`, and no root-vs-dckc credential split.
+    exec docker exec -it -u dckc "$CONTAINER_NAME" /bin/bash -l
 }
 
 if [[ $# -eq 0 ]]; then

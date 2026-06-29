@@ -9,8 +9,8 @@
 # recipe (privileged, writable cgroup mount, tmpfs at /run and /tmp,
 # STOPSIGNAL SIGRTMIN+3 — supplied by the `garden` launcher script).
 #
-# Identity: runs as user `kris` (uid 1000) and uses whatever ssh / gh
-# credentials are present in the bind-mounted /home/kris. The bot's git
+# Identity: runs as user `dckc` (uid 1000) and uses whatever ssh / gh
+# credentials are present in the bind-mounted /home/dckc. The bot's git
 # identity (e.g. endolinbot / kriscendobot) is the repo-local git config,
 # not a separate unix user. The per-host logical name must be UNIQUE
 # across garden instances (see CLAUDE.md § Job system) and is fixed at
@@ -22,6 +22,7 @@ ARG NODE_MAJOR=22
 ARG GO_VERSION=1.23.6
 ARG DOTFILES_REPO=https://github.com/kriskowal/dotfiles.git
 ARG VUNDLE_REPO=https://github.com/VundleVim/Vundle.vim.git
+ARG USERNAME=dckc
 
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -107,21 +108,21 @@ RUN curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg \
 # Claude Code CLI
 RUN npm install -g @anthropic-ai/claude-code
 
-# Create kris user with uid 1000 to match the host user so the
+# Create dckc user with uid 1000 to match the host user so the
 # bind-mounted home stays writable.
 RUN userdel -r ubuntu 2>/dev/null || true \
-    && useradd -m -s /bin/bash -u 1000 -G sudo kris \
-    && echo 'kris ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+    && useradd -m -s /bin/bash -u 1000 -G sudo dckc \
+    && echo 'dckc ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
 # Dotfiles in /opt so the bind mount can't mask them.
 RUN git clone "${DOTFILES_REPO}" /opt/dotfiles \
-    && chown -R kris:kris /opt/dotfiles
+    && chown -R dckc:dckc /opt/dotfiles
 
 # Vundle + plugins.
-USER kris
+USER dckc
 RUN git clone "${VUNDLE_REPO}" /opt/dotfiles/vim/bundle/Vundle.vim \
-    && ln -sfn /opt/dotfiles/vim    /home/kris/.vim \
-    && ln -sfn /opt/dotfiles/.vimrc /home/kris/.vimrc \
+    && ln -sfn /opt/dotfiles/vim    /home/dckc/.vim \
+    && ln -sfn /opt/dotfiles/.vimrc /home/dckc/.vimrc \
     && vim -E -u /opt/dotfiles/.vimrc -i NONE \
          -c 'set nomore' \
          -c 'PluginInstall' \
@@ -134,7 +135,7 @@ RUN printf '%s\n' \
     'export PATH="$HOME/bin:$HOME/go/bin:/opt/go-tools/bin:/usr/local/go/bin:$PATH"' \
     > /etc/profile.d/garden.sh
 
-ENV PATH="/home/kris/bin:/home/kris/go/bin:${PATH}"
+ENV PATH="/home/dckc/bin:/home/dckc/go/bin:${PATH}"
 
 # Mask systemd units that don't make sense in a container (they would
 # otherwise fail noisily on boot).
@@ -149,12 +150,12 @@ RUN systemctl mask \
         getty-static.service \
     || true
 
-# Enable lingering for kris so systemd starts user@1000.service at boot,
+# Enable lingering for dckc so systemd starts user@1000.service at boot,
 # which brings up the user-mode garden-* units (installed by
 # scripts/jobs/install-units.sh into ~/.config/systemd/user/) without a
 # logged-in session. This is the headless prerequisite the CLAUDE.md
 # startup procedure relies on.
-RUN mkdir -p /var/lib/systemd/linger && touch /var/lib/systemd/linger/kris
+RUN mkdir -p /var/lib/systemd/linger && touch /var/lib/systemd/linger/dckc
 
 # Entrypoint links dotfiles and prepares the user-systemd dir before
 # exec'ing systemd as PID 1.
@@ -165,10 +166,10 @@ RUN chmod +x /usr/local/bin/garden-entrypoint
 STOPSIGNAL SIGRTMIN+3
 
 # PID 1 is systemd (entrypoint runs as root, its domain); the garden
-# units run as user kris via the user@1000 manager. Interactive access is
-# `docker exec -it -u kris ... bash -l` (the `garden` launcher does this) —
-# entering as kris, not root, so the session uses kris's gh/ssh credentials
+# units run as user dckc via the user@1000 manager. Interactive access is
+# `docker exec -it -u dckc ... bash -l` (the `garden` launcher does this) —
+# entering as dckc, not root, so the session uses dckc's gh/ssh credentials
 # and drives `systemctl --user` directly without sudo.
-WORKDIR /home/kris
+WORKDIR /home/dckc
 ENTRYPOINT ["/usr/local/bin/garden-entrypoint"]
 CMD ["/lib/systemd/systemd"]
