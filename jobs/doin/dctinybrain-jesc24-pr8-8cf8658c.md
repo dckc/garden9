@@ -13,3 +13,9 @@ discipline. The excerpt below is for human context only:
 TIL: > Put documentation comments after signature elements  -- [OCaml Documentation Guidelines](https://ocamlverse.net/content/documentation_guidelines.html) 
 
 <!-- garden-reaped: 1 -->
+
+---
+claim:
+  host: g9
+  gardener: 1
+  claimed_at: 2026-06-30T02:53:41Z
