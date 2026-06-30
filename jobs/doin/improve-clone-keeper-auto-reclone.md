@@ -14,3 +14,9 @@ The existing default value in `GARDEN_TRACKED_CLONES` becomes:
 Also update the test file `scripts/jobs/test/clone-keeper-test.sh` to cover the missing-clone-with-url path (reclone attempted) and the missing-clone-without-url path (WARN+skip as before).
 
 <!-- garden-reaped: 3 -->
+
+---
+claim:
+  host: g9
+  gardener: 2
+  claimed_at: 2026-06-30T05:13:32Z
