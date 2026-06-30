@@ -1,10 +1,10 @@
 # Garden bulletin
 
-_As of 2026-06-30T13:56:16Z_
+_As of 2026-06-30T13:57:50Z_
 
 ## Latest
 
-The gardener inline-error-excerpt improvement landed cleanly (pushed on the first try), the sole substantive completion in this cycle. The more pressing signal is the board: 59 deadmail jobs have accumulated in `doin` since roughly 08:20Z, all representing messages that repeatedly fail to deliver, and the `improve-deadmail-poison-loop-break` job is currently in flight to add a break condition to `scripts/jobs/deadmail.sh` before dead-letter re-posting — the volume strongly suggests a poison loop is cycling. Until that fix lands and clears the backlog, the board will remain congested and gardener capacity will be tied up on dead-letter handling rather than substantive work.
+The board is dominated by a flood of 58 dead-lettered messages accumulating through the day (08:20–13:44 UTC), all currently claimed but unresolved in `doin` — the maintainer's inbox and message routing are consistently failing to deliver. The one substantive transition this period was `improve-deadmail-poison-loop-break` completing (pushed after one rebase), alongside recently landed `improve-gardener-inline-error-excerpt` and `improve-triager-skip-missing-clone`; these garden self-improvements should reduce future dead-letter churn, but the backlog is already large. The todo queue is empty and no PR work is in flight; the two long-parked [dapp-stake-control#54](https://github.com/agoric-labs/dapp-stake-control/pull/54) and [#55](https://github.com/agoric-labs/dapp-stake-control/pull/55) remain untouched at 384 days. The dead-letter accumulation rate warrants attention — if the poison-loop fix did not already drain the queue, manual triage of the `doin` dead-mail pile is needed.
 
 ## Parked for maintainer feedback
 
@@ -18,7 +18,7 @@ The gardener inline-error-excerpt improvement landed cleanly (pushed on the firs
 ### todo (0)
 (none)
 
-### doin (59)
+### doin (58)
 - [`deadmail-20260630T082027Z-c8cf0e`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T082027Z-c8cf0e.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T084317Z-a93140`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T084317Z-a93140.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T085306Z-f44aee`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T085306Z-f44aee.md) — Dead-lettered message — pick up its intent
@@ -77,15 +77,14 @@ The gardener inline-error-excerpt improvement landed cleanly (pushed on the firs
 - [`deadmail-20260630T132426Z-c7f97b`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T132426Z-c7f97b.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T133317Z-6f84e1`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T133317Z-6f84e1.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T134305Z-e0e9bd`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T134305Z-e0e9bd.md) — Dead-lettered message — pick up its intent
-- [`improve-deadmail-poison-loop-break`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-deadmail-poison-loop-break.md) — In scripts/jobs/deadmail.sh, before calling post-job.sh for a dead-letter mes...
 
-### tada (24)
+### tada (25)
+- [`improve-deadmail-poison-loop-break`](https://github.com/kriskowal/garden/blob/journal2/jobs/tada/improve-deadmail-poison-loop-break.md) — Pushed successfully after one rebase.
 - [`improve-gardener-inline-error-excerpt`](https://github.com/kriskowal/garden/blob/journal2/jobs/tada/improve-gardener-inline-error-excerpt.md) — Pushed successfully on the first try.
 - [`improve-triager-skip-missing-clone`](https://github.com/kriskowal/garden/blob/journal2/jobs/tada/improve-triager-skip-missing-clone.md) — The change requested by the job (triager: skip cleanly when bare clone is abs...
 - [`deadmail-20260630T085833Z-c2e58c`](https://github.com/kriskowal/garden/blob/journal2/jobs/tada/deadmail-20260630T085833Z-c2e58c.md) — The upgrade-ready signal is set at /home/dckc/.garden-state/deploy/upgrade-re...
 - [`deadmail-20260630T085552Z-4d01e0`](https://github.com/kriskowal/garden/blob/journal2/jobs/tada/deadmail-20260630T085552Z-4d01e0.md) — The maintainer inbox is still unavailable (dead-lettered again). Since this i...
-- [`deadmail-20260630T074329Z-260d32`](https://github.com/kriskowal/garden/blob/journal2/jobs/tada/deadmail-20260630T074329Z-260d32.md) — The message dead-lettered again (maintainer inbox still absent) — the garden'...
-- … and 19 more
+- … and 20 more
 
 ## Plan queue (parked — not claimable until promoted)
 ### awaiting go-ahead (maintainer authorization)
