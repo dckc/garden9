@@ -284,9 +284,13 @@ while :; do
       # Anchor the capture under refs/captures so an off-host responder can fetch it
       # even if the inbox-append push was lost; best-effort (blob stays local in $CLONE).
       [ "$sha" = unknown ] || anchor_blob "$sha" "gardener/$id/$base" "$CLONE" 2>/dev/null || true
-      printf 'gardener-%s on %s: job %s handler FAILED (rc=%s); output captured as %s, escalated to the gardener inbox, left in doin for the reaper\n' \
-        "$id" "$GARDEN_HOST" "$base" "$rc" "$sha" \
-        | GARDEN_ROLE=gardener "$HERE/journal-entry.sh" error || true
+      {
+        printf 'gardener-%s on %s: job %s handler FAILED (rc=%s); output captured as %s, escalated to the gardener inbox, left in doin for the reaper\n' \
+          "$id" "$GARDEN_HOST" "$base" "$rc" "$sha"
+        printf '\n--- output excerpt ---\n'
+        head -c 2048 "$capture"
+        printf '\n--- end excerpt ---\n'
+      } | GARDEN_ROLE=gardener "$HERE/journal-entry.sh" error || true
     fi
   fi
   rm -f "$report" "$capture"
