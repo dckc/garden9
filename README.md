@@ -1,10 +1,10 @@
 # Garden bulletin
 
-_As of 2026-06-30T04:00:45Z_
+_As of 2026-06-30T04:03:31Z_
 
 ## Latest
 
-No job-board moves occurred in this window. The board's recent completions include hardening the clone-keeper against missing bare clones (`improve-clone-keeper-auto-reclone-missing`) and teaching the triager to skip gracefully when a clone is absent (`improve-triager-skip-on-missing-clone`); a self-heal check for the sections-index regenerator found the fix already landed and closed cleanly. What warrants attention is the `doin` backlog: seven jobs are stacked on [dctinybrain/jesc24#8](https://github.com/dctinybrain/jesc24/pull/8) (six attention directives plus a review directive), suggesting that PR is attracting repeated triage without resolution, and roughly a dozen near-duplicate clone-keeper improvement jobs are also sitting claimed but not yet completed. Additionally, ten dead-letter jobs from this morning remain in `doin`, indicating the maintainer inbox has been unreachable for several hours; these will need pickup once the inbox is restored.
+A deadmail probe completed cleanly — all three jesc24 repos are accessible and the probe passed. Work on [dctinybrain/jesc24#8](https://github.com/dctinybrain/jesc24/pull/8) is active, with four jobs (three attention directives and a review directive) still claimed in doin and a fresh monitor-auth journal entry filed. The notable signal this cycle is a large backpressure wave: roughly twenty jobs — the entire batch of `improve-clone-keeper-*` hardening tasks, the triager self-heals for missing bare clones, `improve-mentor-job-dedup`, additional PR #8 attention directives, and a deadmail — were released from doin back to todo, indicating gardeners claimed but could not complete them. The triager self-heal jobs implicate a missing bare clone as the likely root cause blocking the wider clone-keeper and triager work; those jobs remain open and unresolved.
 
 ## Parked for maintainer feedback
 
@@ -15,15 +15,30 @@ No job-board moves occurred in this window. The board's recent completions inclu
 (no pending maintainer messages)
 
 ## Board
-### todo (0)
-(none)
+### todo (19)
+- [`dctinybrain-jesc24-pr8-2b9b686e`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/dctinybrain-jesc24-pr8-2b9b686e.md) — attention directive on dctinybrain/jesc24 PR #8
+- [`dctinybrain-jesc24-pr8-43dac6e5`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/dctinybrain-jesc24-pr8-43dac6e5.md) — attention directive on dctinybrain/jesc24 PR #8
+- [`dctinybrain-jesc24-pr8-a1945b78`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/dctinybrain-jesc24-pr8-a1945b78.md) — attention directive on dctinybrain/jesc24 PR #8
+- [`deadmail-20260630T025027Z-252212`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/deadmail-20260630T025027Z-252212.md) — Dead-lettered message — pick up its intent
+- [`improve-clone-keeper-auto-bootstrap`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-auto-bootstrap.md) — In scripts/jobs/clone-keeper.sh, the keep_clone function currently logs
+- [`improve-clone-keeper-auto-init`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-auto-init.md) — In scripts/jobs/clone-keeper.sh, extend the GARDEN_TRACKED_CLONES entry forma...
+- [`improve-clone-keeper-auto-reclone`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-auto-reclone.md) — In scripts/jobs/clone-keeper.sh, the keep_clone function (lines 78-81) logs W...
+- [`improve-clone-keeper-bootstrap-missing-bare-clone`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-bootstrap-missing-bare-clone.md) — Harden scripts/jobs/clone-keeper.sh so a missing tracked bare clone is determ...
+- [`improve-clone-keeper-missing-init`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-missing-init.md) — scripts/jobs/clone-keeper.sh warns and skips when a tracked bare clone path i...
+- [`improve-clone-keeper-reclone`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-reclone.md) — Harden scripts/jobs/clone-keeper.sh against a permanently missing bare clone.
+- [`improve-clone-keeper-reclone-missing`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-reclone-missing.md) — In scripts/jobs/clone-keeper.sh, the keep_clone function (line 78-81) warns and
+- [`improve-clone-keeper-recreate-missing`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-recreate-missing.md) — scripts/ clone-keeper (scripts/jobs/clone-keeper.sh or equivalent) currently
+- [`improve-clone-keeper-self-heal`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-self-heal.md) — In scripts/jobs/clone-keeper.sh, extend the GARDEN_TRACKED_CLONES line format
+- [`improve-clone-keeper-self-init`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-self-init.md) — In scripts/jobs/clone-keeper.sh, extend the GARDEN_TRACKED_CLONES entry forma...
+- [`improve-clone-keeper-self-reclone`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-self-reclone.md) — In scripts/jobs/clone-keeper.sh, extend GARDEN_TRACKED_CLONES from a 3-column...
+- [`improve-mentor-job-dedup`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-mentor-job-dedup.md) — In scripts/jobs/handlers/mentor-claude.sh, the loop that parses JOB blocks ca...
+- [`self-heal-fix-garden-triager-agoric-labs-jesc24-triager-skip-missing-bare-clone`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/self-heal-fix-garden-triager-agoric-labs-jesc24-triager-skip-missing-bare-clone.md) — In scripts/jobs/triager.sh line 32, change the hard die on a missing bare clo...
+- [`self-heal-fix-garden-triager-dctinybrain-jesc24-repos-default-points-worktrees`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/self-heal-fix-garden-triager-dctinybrain-jesc24-repos-default-points-worktrees.md) — Fix the wrong GARDEN_REPOS default in scripts/jobs/triager.sh (line 25) and s...
+- [`self-heal-fix-garden-triager-repos-default-wrong-dir`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/self-heal-fix-garden-triager-repos-default-wrong-dir.md) — scripts/jobs/triager.sh line 25 defaults GARDEN_REPOS to $GARDEN_ROOT/repos, ...
 
-### doin (33)
-- [`dctinybrain-jesc24-pr8-2b9b686e`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/dctinybrain-jesc24-pr8-2b9b686e.md) — attention directive on dctinybrain/jesc24 PR #8
-- [`dctinybrain-jesc24-pr8-43dac6e5`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/dctinybrain-jesc24-pr8-43dac6e5.md) — attention directive on dctinybrain/jesc24 PR #8
+### doin (13)
 - [`dctinybrain-jesc24-pr8-4ac3221c`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/dctinybrain-jesc24-pr8-4ac3221c.md) — attention directive on dctinybrain/jesc24 PR #8
 - [`dctinybrain-jesc24-pr8-8cf8658c`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/dctinybrain-jesc24-pr8-8cf8658c.md) — attention directive on dctinybrain/jesc24 PR #8
-- [`dctinybrain-jesc24-pr8-a1945b78`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/dctinybrain-jesc24-pr8-a1945b78.md) — attention directive on dctinybrain/jesc24 PR #8
 - [`dctinybrain-jesc24-pr8-e8334684`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/dctinybrain-jesc24-pr8-e8334684.md) — attention directive on dctinybrain/jesc24 PR #8
 - [`dctinybrain-jesc24-pr8-review-6fb8daec`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/dctinybrain-jesc24-pr8-review-6fb8daec.md) — Review directive on dctinybrain/jesc24 PR #8
 - [`deadmail-20260630T014217Z-74e560`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T014217Z-74e560.md) — Dead-lettered message — pick up its intent
@@ -31,35 +46,18 @@ No job-board moves occurred in this window. The board's recent completions inclu
 - [`deadmail-20260630T021236Z-051d3f`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T021236Z-051d3f.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T021237Z-220f67`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T021237Z-220f67.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T021237Z-c7fe04`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T021237Z-c7fe04.md) — Dead-lettered message — pick up its intent
-- [`deadmail-20260630T025027Z-252212`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T025027Z-252212.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T031324Z-018412`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T031324Z-018412.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T031325Z-3454f5`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T031325Z-3454f5.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T031325Z-8e3744`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T031325Z-8e3744.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T034324Z-31124d`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T034324Z-31124d.md) — Dead-lettered message — pick up its intent
-- [`deadmail-20260630T035322Z-1d8a06`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T035322Z-1d8a06.md) — Dead-lettered message — pick up its intent
-- [`improve-clone-keeper-auto-bootstrap`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-auto-bootstrap.md) — In scripts/jobs/clone-keeper.sh, the keep_clone function currently logs
-- [`improve-clone-keeper-auto-init`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-auto-init.md) — In scripts/jobs/clone-keeper.sh, extend the GARDEN_TRACKED_CLONES entry forma...
-- [`improve-clone-keeper-auto-reclone`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-auto-reclone.md) — In scripts/jobs/clone-keeper.sh, the keep_clone function (lines 78-81) logs W...
-- [`improve-clone-keeper-bootstrap-missing-bare-clone`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-bootstrap-missing-bare-clone.md) — Harden scripts/jobs/clone-keeper.sh so a missing tracked bare clone is determ...
-- [`improve-clone-keeper-missing-init`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-missing-init.md) — scripts/jobs/clone-keeper.sh warns and skips when a tracked bare clone path i...
-- [`improve-clone-keeper-reclone`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-reclone.md) — Harden scripts/jobs/clone-keeper.sh against a permanently missing bare clone.
-- [`improve-clone-keeper-reclone-missing`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-reclone-missing.md) — In scripts/jobs/clone-keeper.sh, the keep_clone function (line 78-81) warns and
-- [`improve-clone-keeper-recreate-missing`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-recreate-missing.md) — scripts/ clone-keeper (scripts/jobs/clone-keeper.sh or equivalent) currently
-- [`improve-clone-keeper-self-heal`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-self-heal.md) — In scripts/jobs/clone-keeper.sh, extend the GARDEN_TRACKED_CLONES line format
-- [`improve-clone-keeper-self-init`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-self-init.md) — In scripts/jobs/clone-keeper.sh, extend the GARDEN_TRACKED_CLONES entry forma...
-- [`improve-clone-keeper-self-reclone`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-self-reclone.md) — In scripts/jobs/clone-keeper.sh, extend GARDEN_TRACKED_CLONES from a 3-column...
-- [`improve-mentor-job-dedup`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-mentor-job-dedup.md) — In scripts/jobs/handlers/mentor-claude.sh, the loop that parses JOB blocks ca...
-- [`self-heal-fix-garden-triager-agoric-labs-jesc24-triager-skip-missing-bare-clone`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/self-heal-fix-garden-triager-agoric-labs-jesc24-triager-skip-missing-bare-clone.md) — In scripts/jobs/triager.sh line 32, change the hard die on a missing bare clo...
-- [`self-heal-fix-garden-triager-dctinybrain-jesc24-repos-default-points-worktrees`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/self-heal-fix-garden-triager-dctinybrain-jesc24-repos-default-points-worktrees.md) — Fix the wrong GARDEN_REPOS default in scripts/jobs/triager.sh (line 25) and s...
-- [`self-heal-fix-garden-triager-repos-default-wrong-dir`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/self-heal-fix-garden-triager-repos-default-wrong-dir.md) — scripts/jobs/triager.sh line 25 defaults GARDEN_REPOS to $GARDEN_ROOT/repos, ...
 
-### tada (12)
+### tada (13)
+- [`deadmail-20260630T035322Z-1d8a06`](https://github.com/kriskowal/garden/blob/journal2/jobs/tada/deadmail-20260630T035322Z-1d8a06.md) — All three repos are accessible and the probe passes. Here is the completion r...
 - [`improve-triager-skip-on-missing-clone`](https://github.com/kriskowal/garden/blob/journal2/jobs/tada/improve-triager-skip-on-missing-clone.md) — Completion report:
 - [`improve-clone-keeper-auto-reclone-missing`](https://github.com/kriskowal/garden/blob/journal2/jobs/tada/improve-clone-keeper-auto-reclone-missing.md) — Push succeeded on first attempt.
 - [`deadmail-20260630T024255Z-6329b9`](https://github.com/kriskowal/garden/blob/journal2/jobs/tada/deadmail-20260630T024255Z-6329b9.md) — The maintainer inbox is still unavailable, creating another deadmail (2026063...
 - [`self-heal-fix-garden-regenerate-sections-index-missing-library-clean-noop`](https://github.com/kriskowal/garden/blob/journal2/jobs/tada/self-heal-fix-garden-regenerate-sections-index-missing-library-clean-noop.md) — Confirmed. No work to do — the fix is already landed. Writing the completion ...
-- [`deadmail-20260629T162915Z-fd50f6`](https://github.com/kriskowal/garden/blob/journal2/jobs/tada/deadmail-20260629T162915Z-fd50f6.md) — Completion report
-- … and 7 more
+- … and 8 more
 
 ## Plan queue (parked — not claimable until promoted)
 ### awaiting go-ahead (maintainer authorization)
