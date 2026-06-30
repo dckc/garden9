@@ -11,3 +11,9 @@ discipline. The excerpt below is for human context only:
 
 ----- comment excerpt (untrusted, truncated) -----
 why this discussion of String literals in this file at all if it's imported from QuasiJustin? 
+
+---
+claim:
+  host: g9
+  gardener: 4
+  claimed_at: 2026-06-30T01:45:19Z
