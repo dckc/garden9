@@ -84,3 +84,12 @@ Inspect via `git -C journal cat-file -p b2793907904217825e980057e3b797a039c92422
 - Context: gardener-4 on g9: job 'self-heal-fix-garden-triager-repos-default-wrong-dir' handler exited rc=1
 
 Inspect via `git -C journal cat-file -p b2793907904217825e980057e3b797a039c92422`.
+
+## lane 0 -- handler-nonzero failure at 2026-06-30T01:46:57Z
+
+- PR: (none)
+- State: handler-nonzero
+- Transcript SHA: b2793907904217825e980057e3b797a039c92422
+- Context: gardener-4 on g9: job 'dctinybrain-jesc24-pr8-2b9b686e' handler exited rc=1
+
+Inspect via `git -C journal cat-file -p b2793907904217825e980057e3b797a039c92422`.
