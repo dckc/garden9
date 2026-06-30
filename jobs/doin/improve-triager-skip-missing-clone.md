@@ -1,1 +1,7 @@
 In `scripts/jobs/triager.sh` (line 32), change `[ -d "$BARE" ] || die "no bare clone at $BARE (clone the repo first)"` to a graceful `log "WARN: bare clone not yet at $BARE; waiting for clone-keeper"; exit 0`. The triager fires every 2 minutes via a systemd timer; a missing bare clone is a transient provisioning state (clone-keeper creates it on its own schedule), not a fatal error. The current `die` causes systemd to log "Failed with result 'exit-code'" every 2 minutes for all three jesc24 repos (`agoric-labs-jesc24`, `dctinybrain-jesc24`, `dckc-jesc24`), flooding journalctl with noise that buries real failures. After the clone arrives, the triager will succeed on its next tick — no additional changes needed.
+
+---
+claim:
+  host: g9
+  gardener: 5
+  claimed_at: 2026-06-30T13:54:45Z
