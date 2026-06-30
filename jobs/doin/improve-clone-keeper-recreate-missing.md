@@ -7,3 +7,9 @@ notices" failure into a self-healing one.  The WARN line that surfaced this:
 
   clone-keeper: WARN: tracked clone worktrees/endojs-endo.git is missing or not
   a git repo at /home/dckc/worktrees/endojs-endo.git; skipping
+
+---
+claim:
+  host: g9
+  gardener: 3
+  claimed_at: 2026-06-30T01:47:02Z
