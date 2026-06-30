@@ -759,3 +759,12 @@ Inspect via `git -C journal cat-file -p dc7daa7ba798e65554944ad3706405b3fb8cacbe
 - Context: gardener-3 on g9: job 'improve-clone-keeper-missing-init' handler exited rc=1
 
 Inspect via `git -C journal cat-file -p 7fca492465179308e01337d8dee10f3e9c5fd601`.
+
+## lane 0 -- handler-nonzero failure at 2026-06-30T06:23:56Z
+
+- PR: (none)
+- State: handler-nonzero
+- Transcript SHA: e37f7b2ebf71e57b2e4095175fba2fdc10e14b85
+- Context: gardener-1 on g9: job 'deadmail-20260630T051437Z-c6f945' handler exited rc=1
+
+Inspect via `git -C journal cat-file -p e37f7b2ebf71e57b2e4095175fba2fdc10e14b85`.
