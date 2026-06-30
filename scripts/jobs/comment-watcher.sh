@@ -175,9 +175,19 @@ source_path_healthy() {  # source_path_healthy <repo>
 fleet_draining && { log "fleet draining; skipping"; exit 0; }
 
 # slug is <owner>-<name>; owners in our set carry no dash, so split on the first.
-owner="${slug%%-*}"; name="${slug#*-}"
-repo="$owner/$name"
-[ "$owner" != "$slug" ] && [ -n "$name" ] || die "cannot derive owner/name from slug '$slug'"
+# EXCEPTION: if the comment-repos/<slug> file has non-empty content, it holds the
+# canonical owner/name (allows owners with dashes, e.g. agoric-labs/jesc24).
+_repo_override="$(tr -d '[:space:]' < "$GARDEN_ROOT/journal/comment-repos/$slug" 2>/dev/null || true)"
+if [ -n "$_repo_override" ]; then
+  repo="$_repo_override"
+  owner="${repo%%/*}"; name="${repo#*/}"
+  [ -n "$owner" ] && [ -n "$name" ] && [ "$owner/$name" = "$repo" ] \
+    || die "malformed repo override in comment-repos/$slug: '$repo'"
+else
+  owner="${slug%%-*}"; name="${slug#*-}"
+  repo="$owner/$name"
+  [ "$owner" != "$slug" ] && [ -n "$name" ] || die "cannot derive owner/name from slug '$slug'"
+fi
 
 # --- bot-repo guard for the AUTONOMOUS-MERGE (finalization) path -------------
 # The finalization step un-drafts and MERGES a PR on its own. That authority is
