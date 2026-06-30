@@ -33,3 +33,9 @@ Two changes, both in `clone-keeper.sh`:
 Why: the current WARN fires forever on `g9` because `endojs-endo.git` was never created there.
 With this change the first tick after the fix creates the clone and subsequent ticks stay quiet
 on the no-op path — consistent with the keeper's own "quiet on the no-op path" design goal.
+
+---
+claim:
+  host: g9
+  gardener: 3
+  claimed_at: 2026-06-30T01:46:12Z
