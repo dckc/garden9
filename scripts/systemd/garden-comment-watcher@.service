@@ -12,6 +12,7 @@ Type=oneshot
 # doesn't mark a SIGTERM stop as Failed.
 SuccessExitStatus=143 130 SIGTERM SIGINT
 Environment=GARDEN_ROOT=@GARDEN_ROOT@
+Environment=GARDEN_REPOS=@GARDEN_ROOT@/worktrees
 # Leader-only singleton: run only on the host whose GARDEN identity matches the
 # journal hosts/main-host marker. On a follower the timer still fires but this
 # ExecCondition fails, so the tick is SKIPPED CLEANLY (condition-failed, never
