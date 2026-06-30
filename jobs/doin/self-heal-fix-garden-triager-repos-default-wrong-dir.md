@@ -9,3 +9,9 @@
 Failure signature: `FATAL: no bare clone at /home/dckc/repos/dckc-jesc24.git (clone the repo first)` — the `repos/` directory does not exist; `worktrees/dckc-jesc24.git` (and sibling bare clones `agoric-labs-jesc24.git`, `dctinybrain-jesc24.git`) are the canonical location. The `clone-keeper.sh` also tracks paths under `worktrees/`, confirming that `worktrees/` is the host convention for bare clones. No change to the unit template needed; fixing the script default covers all instances.
 
 <!-- garden-reaped: 1 -->
+
+---
+claim:
+  host: g9
+  gardener: 3
+  claimed_at: 2026-06-30T02:53:59Z
