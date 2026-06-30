@@ -1,9 +1,0 @@
-Fix the wrong GARDEN_REPOS default in scripts/jobs/triager.sh (line 25) and scripts/jobs/comment-watcher.sh (line 102): both default to `$GARDEN_ROOT/repos` but the garden's bare clones live under `$GARDEN_ROOT/worktrees` per the garden layout (CLAUDE.md). Change both lines from `: "${GARDEN_REPOS:=$GARDEN_ROOT/repos}"` to `: "${GARDEN_REPOS:=$GARDEN_ROOT/worktrees}"`. Also update the companion service unit templates (scripts/systemd/garden-triager@.service and garden-comment-watcher@.service) if they need the same correction, and update any doc comments in the scripts that reference the `repos/` path. No directory renaming or symlinks needed — the scripts' defaults are simply wrong relative to where the garden actually stores bare clones. Verify by running `systemctl --user start garden-triager@dctinybrain-jesc24.service` after the fix.
-
-<!-- garden-reaped: 1 -->
-
----
-claim:
-  host: g9
-  gardener: 5
-  claimed_at: 2026-06-30T02:53:55Z
