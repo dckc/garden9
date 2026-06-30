@@ -13,3 +13,9 @@ This turns a recurring every-30-minute WARN that requires manual intervention
 (the endo bare clone was missing on host g9) into a self-healing re-clone,
 matching the pattern already established for fetch failures (log + leave in
 place) and fast-forward races (log + retry next tick).
+
+---
+claim:
+  host: g9
+  gardener: 4
+  claimed_at: 2026-06-30T01:46:20Z
