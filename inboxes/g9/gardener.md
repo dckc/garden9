@@ -768,3 +768,12 @@ Inspect via `git -C journal cat-file -p 7fca492465179308e01337d8dee10f3e9c5fd601
 - Context: gardener-1 on g9: job 'deadmail-20260630T051437Z-c6f945' handler exited rc=1
 
 Inspect via `git -C journal cat-file -p e37f7b2ebf71e57b2e4095175fba2fdc10e14b85`.
+
+## lane 0 -- handler-nonzero failure at 2026-06-30T06:24:06Z
+
+- PR: (none)
+- State: handler-nonzero
+- Transcript SHA: bcddeb686ea153e53f2124c257b623b293e0345d
+- Context: gardener-5 on g9: job 'self-heal-fix-garden-triager-dctinybrain-jesc24-repos-default-points-worktrees' handler exited rc=1
+
+Inspect via `git -C journal cat-file -p bcddeb686ea153e53f2124c257b623b293e0345d`.
