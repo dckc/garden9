@@ -35,3 +35,9 @@ With this change the first tick after the fix creates the clone and subsequent t
 on the no-op path — consistent with the keeper's own "quiet on the no-op path" design goal.
 
 <!-- garden-reaped: 4 -->
+
+---
+claim:
+  host: g9
+  gardener: 5
+  claimed_at: 2026-06-30T06:23:37Z
