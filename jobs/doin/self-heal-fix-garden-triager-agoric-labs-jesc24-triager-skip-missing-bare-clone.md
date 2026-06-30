@@ -15,3 +15,9 @@ until the operator runs the clone, consistent with the skip-cleanly pattern used
 garden scripts (see recent commits: "skip cleanly when tip has no library/topics", etc.).
 
 <!-- garden-reaped: 2 -->
+
+---
+claim:
+  host: g9
+  gardener: 1
+  claimed_at: 2026-06-30T04:07:20Z
