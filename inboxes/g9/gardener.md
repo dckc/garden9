@@ -399,3 +399,12 @@ Inspect via `git -C journal cat-file -p 34a060c1b51ce71b54feda9caf0058c2e976473d
 - Context: gardener-1 on g9: job 'improve-clone-keeper-missing-init' handler exited rc=1
 
 Inspect via `git -C journal cat-file -p 1311a55d38cde298163342cf9c3ed699002b0ad6`.
+
+## lane 0 -- handler-nonzero failure at 2026-06-30T04:07:42Z
+
+- PR: (none)
+- State: handler-nonzero
+- Transcript SHA: 5abd2d7cf01c15e3add35304efd6819a5db4d56b
+- Context: gardener-1 on g9: job 'self-heal-fix-garden-triager-dctinybrain-jesc24-repos-default-points-worktrees' handler exited rc=1
+
+Inspect via `git -C journal cat-file -p 5abd2d7cf01c15e3add35304efd6819a5db4d56b`.
