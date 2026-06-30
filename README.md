@@ -1,10 +1,10 @@
 # Garden bulletin
 
-_As of 2026-06-30T03:55:58Z_
+_As of 2026-06-30T04:00:45Z_
 
 ## Latest
 
-One more deadmail arrived since the last bulletin — essentially no other movement. The doin queue remains congested: six attention directives and a review directive for [dctinybrain/jesc24#8](https://github.com/dctinybrain/jesc24/pull/8) are piling up unclaimed alongside eleven deadmails (all timestamped today) and a cluster of nine clone-keeper hardening jobs. The triager's skip-on-missing-clone fix and the auto-reclone-missing clone-keeper improvement are both in tada, so some self-heal groundwork did complete, but the backlog of unresolved deadmails is worth a look — repeated dead-lettering usually signals a delivery or handler misconfiguration.
+No job-board moves occurred in this window. The board's recent completions include hardening the clone-keeper against missing bare clones (`improve-clone-keeper-auto-reclone-missing`) and teaching the triager to skip gracefully when a clone is absent (`improve-triager-skip-on-missing-clone`); a self-heal check for the sections-index regenerator found the fix already landed and closed cleanly. What warrants attention is the `doin` backlog: seven jobs are stacked on [dctinybrain/jesc24#8](https://github.com/dctinybrain/jesc24/pull/8) (six attention directives plus a review directive), suggesting that PR is attracting repeated triage without resolution, and roughly a dozen near-duplicate clone-keeper improvement jobs are also sitting claimed but not yet completed. Additionally, ten dead-letter jobs from this morning remain in `doin`, indicating the maintainer inbox has been unreachable for several hours; these will need pickup once the inbox is restored.
 
 ## Parked for maintainer feedback
 
@@ -42,8 +42,8 @@ One more deadmail arrived since the last bulletin — essentially no other movem
 - [`improve-clone-keeper-auto-reclone`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-auto-reclone.md) — In scripts/jobs/clone-keeper.sh, the keep_clone function (lines 78-81) logs W...
 - [`improve-clone-keeper-bootstrap-missing-bare-clone`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-bootstrap-missing-bare-clone.md) — Harden scripts/jobs/clone-keeper.sh so a missing tracked bare clone is determ...
 - [`improve-clone-keeper-missing-init`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-missing-init.md) — scripts/jobs/clone-keeper.sh warns and skips when a tracked bare clone path i...
-- [`improve-clone-keeper-reclone-missing`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-reclone-missing.md) — In scripts/jobs/clone-keeper.sh, the keep_clone function (line 78-81) warns and
 - [`improve-clone-keeper-reclone`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-reclone.md) — Harden scripts/jobs/clone-keeper.sh against a permanently missing bare clone.
+- [`improve-clone-keeper-reclone-missing`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-reclone-missing.md) — In scripts/jobs/clone-keeper.sh, the keep_clone function (line 78-81) warns and
 - [`improve-clone-keeper-recreate-missing`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-recreate-missing.md) — scripts/ clone-keeper (scripts/jobs/clone-keeper.sh or equivalent) currently
 - [`improve-clone-keeper-self-heal`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-self-heal.md) — In scripts/jobs/clone-keeper.sh, extend the GARDEN_TRACKED_CLONES line format
 - [`improve-clone-keeper-self-init`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-self-init.md) — In scripts/jobs/clone-keeper.sh, extend the GARDEN_TRACKED_CLONES entry forma...
