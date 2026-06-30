@@ -20,3 +20,9 @@ Why: `worktrees/endojs-endo.git` is currently absent on host `g9`, causing a
 WARN every 30 minutes with no recovery. The clone-keeper's purpose is to keep bare
 clones fresh without agent intervention; a missing clone should be recreated
 deterministically, not left broken until a human notices.
+
+---
+claim:
+  host: g9
+  gardener: 2
+  claimed_at: 2026-06-30T01:46:18Z
