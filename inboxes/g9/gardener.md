@@ -363,3 +363,12 @@ Inspect via `git -C journal cat-file -p 702a4d722eb38f9536849418119998d1f50a86a6
 - Context: gardener-2 on g9: job 'deadmail-20260630T025027Z-252212' handler exited rc=1
 
 Inspect via `git -C journal cat-file -p 3351864e20705c44ed0260f8a42c246e574d4adb`.
+
+## lane 0 -- handler-nonzero failure at 2026-06-30T04:07:04Z
+
+- PR: (none)
+- State: handler-nonzero
+- Transcript SHA: 3af58d2460e9a68b986ec6cc940dc798c5cdd8e9
+- Context: gardener-5 on g9: job 'self-heal-fix-garden-triager-repos-default-wrong-dir' handler exited rc=1
+
+Inspect via `git -C journal cat-file -p 3af58d2460e9a68b986ec6cc940dc798c5cdd8e9`.
