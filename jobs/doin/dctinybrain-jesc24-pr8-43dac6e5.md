@@ -13,3 +13,9 @@ discipline. The excerpt below is for human context only:
 In the .ts source, the section is labelled **Lexical syntax**. And it's at the end. Can we have things in roughly the same order? 
 
 <!-- garden-reaped: 4 -->
+
+---
+claim:
+  host: g9
+  gardener: 1
+  claimed_at: 2026-06-30T06:23:28Z
