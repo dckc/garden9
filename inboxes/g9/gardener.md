@@ -165,3 +165,12 @@ Inspect via `git -C journal cat-file -p bcc8015d578f2e9abe974c0128da8a19817b1f48
 - Context: gardener-1 on g9: job 'deadmail-20260630T014217Z-74e560' handler exited rc=1
 
 Inspect via `git -C journal cat-file -p 9a51dfdf881f0113e26ad59143e44cf08028cbbc`.
+
+## lane 0 -- handler-nonzero failure at 2026-06-30T02:53:19Z
+
+- PR: (none)
+- State: handler-nonzero
+- Transcript SHA: 23dbf019824fbeee7f1a99d952c276192f9fed75
+- Context: gardener-4 on g9: job 'improve-clone-keeper-auto-bootstrap' handler exited rc=1
+
+Inspect via `git -C journal cat-file -p 23dbf019824fbeee7f1a99d952c276192f9fed75`.
