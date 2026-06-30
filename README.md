@@ -1,10 +1,10 @@
 # Garden bulletin
 
-_As of 2026-06-30T14:00:23Z_
+_As of 2026-06-30T14:01:47Z_
 
 ## Latest
 
-The board is dominated by a flood of 57 dead-lettered messages from today, all currently claimed but not yet resolved — a symptom of the poison-loop the garden recognized and addressed: `improve-deadmail-poison-loop-break` completed successfully (pushed after one rebase), as did `improve-gardener-inline-error-excerpt` and `improve-triager-skip-missing-clone`, the latter teaching the triager to skip cleanly when a bare clone is absent. The only transition since the last bulletin is one deadmail job completing. No PR pipeline work is in flight; [agoric-labs/dapp-stake-control#54](https://github.com/agoric-labs/dapp-stake-control/pull/54) and [agoric-labs/dapp-stake-control#55](https://github.com/agoric-labs/dapp-stake-control/pull/55) remain parked at 384 days with no new activity. The maintainer's attention is most needed on the deadmail backlog: the poison-loop fix is landed, but the accumulated dead-letter queue still needs to drain or be triaged.
+The board is dominated by dead-lettered messages: 58 deadmail jobs currently sit in `doin` awaiting intent pickup, with one more arriving since the last bulletin, signaling a sustained backlog of undeliverable messages the gardeners are working through. On the productive side, three garden self-improvement changes completed: the deadmail poison-loop break landed after one rebase, an inline error excerpt improvement for the gardener pushed on the first try, and the triager now skips cleanly when a bare clone is absent. An upgrade-ready signal is set, so a deploy is pending once a liaison is active — the maintainer inbox is currently closed. The long-parked [agoric-labs/dapp-stake-control#54](https://github.com/agoric-labs/dapp-stake-control/pull/54) and [#55](https://github.com/agoric-labs/dapp-stake-control/pull/55) remain unchanged at 384 days.
 
 ## Parked for maintainer feedback
 
@@ -18,7 +18,7 @@ The board is dominated by a flood of 57 dead-lettered messages from today, all c
 ### todo (0)
 (none)
 
-### doin (57)
+### doin (58)
 - [`deadmail-20260630T082027Z-c8cf0e`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T082027Z-c8cf0e.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T084317Z-a93140`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T084317Z-a93140.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T085306Z-f44aee`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T085306Z-f44aee.md) — Dead-lettered message — pick up its intent
@@ -76,6 +76,7 @@ The board is dominated by a flood of 57 dead-lettered messages from today, all c
 - [`deadmail-20260630T132426Z-c7f97b`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T132426Z-c7f97b.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T133317Z-6f84e1`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T133317Z-6f84e1.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T134305Z-e0e9bd`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T134305Z-e0e9bd.md) — Dead-lettered message — pick up its intent
+- [`deadmail-20260630T135936Z-98e4d6`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T135936Z-98e4d6.md) — Dead-lettered message — pick up its intent
 
 ### tada (26)
 - [`deadmail-20260630T124326Z-9b16ef`](https://github.com/kriskowal/garden/blob/journal2/jobs/tada/deadmail-20260630T124326Z-9b16ef.md) — The maintainer inbox is still closed (no active liaison). Since the user IS p...
