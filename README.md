@@ -1,6 +1,6 @@
 # Garden bulletin
 
-_As of 2026-06-30T03:15:11Z_
+_As of 2026-06-30T03:23:17Z_
 
 ## Latest
 
@@ -8,17 +8,19 @@ Seven new directives for [dctinybrain/jesc24#8](https://github.com/dctinybrain/j
 
 ## Parked for maintainer feedback
 
-- [agoric-labs/dapp-stake-control#54](https://github.com/agoric-labs/dapp-stake-control/pull/54) — chore: log boardId of instance in coreEval (waiting 383d)
-- [agoric-labs/dapp-stake-control#55](https://github.com/agoric-labs/dapp-stake-control/pull/55) — chore: punt on give.Retainer (waiting 383d)
+- [agoric-labs/dapp-stake-control#54](https://github.com/agoric-labs/dapp-stake-control/pull/54) — chore: log boardId of instance in coreEval (waiting 384d)
+- [agoric-labs/dapp-stake-control#55](https://github.com/agoric-labs/dapp-stake-control/pull/55) — chore: punt on give.Retainer (waiting 384d)
 ## Messages to the maintainer
 
 (no pending maintainer messages)
 
 ## Board
-### todo (0)
-(none)
+### todo (3)
+- [`deadmail-20260630T021236Z-051d3f`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/deadmail-20260630T021236Z-051d3f.md) — Dead-lettered message — pick up its intent
+- [`deadmail-20260630T021237Z-220f67`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/deadmail-20260630T021237Z-220f67.md) — Dead-lettered message — pick up its intent
+- [`deadmail-20260630T021237Z-c7fe04`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/deadmail-20260630T021237Z-c7fe04.md) — Dead-lettered message — pick up its intent
 
-### doin (32)
+### doin (29)
 - [`dctinybrain-jesc24-pr8-2b9b686e`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/dctinybrain-jesc24-pr8-2b9b686e.md) — attention directive on dctinybrain/jesc24 PR #8
 - [`dctinybrain-jesc24-pr8-43dac6e5`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/dctinybrain-jesc24-pr8-43dac6e5.md) — attention directive on dctinybrain/jesc24 PR #8
 - [`dctinybrain-jesc24-pr8-4ac3221c`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/dctinybrain-jesc24-pr8-4ac3221c.md) — attention directive on dctinybrain/jesc24 PR #8
@@ -28,9 +30,6 @@ Seven new directives for [dctinybrain/jesc24#8](https://github.com/dctinybrain/j
 - [`dctinybrain-jesc24-pr8-review-6fb8daec`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/dctinybrain-jesc24-pr8-review-6fb8daec.md) — Review directive on dctinybrain/jesc24 PR #8
 - [`deadmail-20260630T014217Z-74e560`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T014217Z-74e560.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T015024Z-fccead`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T015024Z-fccead.md) — Dead-lettered message — pick up its intent
-- [`deadmail-20260630T021236Z-051d3f`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T021236Z-051d3f.md) — Dead-lettered message — pick up its intent
-- [`deadmail-20260630T021237Z-220f67`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T021237Z-220f67.md) — Dead-lettered message — pick up its intent
-- [`deadmail-20260630T021237Z-c7fe04`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T021237Z-c7fe04.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T024255Z-6329b9`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T024255Z-6329b9.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T025027Z-252212`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T025027Z-252212.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T031324Z-018412`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T031324Z-018412.md) — Dead-lettered message — pick up its intent
