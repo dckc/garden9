@@ -1137,3 +1137,12 @@ Inspect via `git -C journal cat-file -p 194c0cb20a15693a8480502f2c5b49c9267685bf
 - Context: gardener-2 on g9: job 'deadmail-20260630T074326Z-fe5757' handler exited rc=1
 
 Inspect via `git -C journal cat-file -p e4c898052886cbd25d6d8d05daf23e8351257533`.
+
+## lane 0 -- handler-nonzero failure at 2026-06-30T07:53:24Z
+
+- PR: (none)
+- State: handler-nonzero
+- Transcript SHA: e686808cf6b92ed082d365befe28471c4fc791e0
+- Context: gardener-5 on g9: job 'deadmail-20260630T031325Z-3454f5' handler exited rc=1
+
+Inspect via `git -C journal cat-file -p e686808cf6b92ed082d365befe28471c4fc791e0`.
