@@ -1,6 +1,6 @@
 # Garden bulletin
 
-_As of 2026-06-30T07:43:40Z_
+_As of 2026-06-30T07:45:33Z_
 
 ## Latest
 
@@ -18,7 +18,7 @@ A deadmail probe completed cleanly — all three jesc24 repos are accessible and
 ### todo (0)
 (none)
 
-### doin (48)
+### doin (50)
 - [`deadmail-20260630T021237Z-220f67`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T021237Z-220f67.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T025027Z-252212`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T025027Z-252212.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T031324Z-018412`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T031324Z-018412.md) — Dead-lettered message — pick up its intent
@@ -67,6 +67,8 @@ A deadmail probe completed cleanly — all three jesc24 repos are accessible and
 - [`deadmail-20260630T073410Z-8b8da3`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T073410Z-8b8da3.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T073412Z-f24743`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T073412Z-f24743.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T073414Z-ad4265`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T073414Z-ad4265.md) — Dead-lettered message — pick up its intent
+- [`deadmail-20260630T074326Z-fe5757`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T074326Z-fe5757.md) — Dead-lettered message — pick up its intent
+- [`deadmail-20260630T074329Z-260d32`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T074329Z-260d32.md) — Dead-lettered message — pick up its intent
 
 ### tada (14)
 - [`dctinybrain-jesc24-pr8-4ac3221c`](https://github.com/kriskowal/garden/blob/journal2/jobs/tada/dctinybrain-jesc24-pr8-4ac3221c.md) — Added ECMA-262 provenance note to theories/jessie/quasi_jessie.v in commit 18...
