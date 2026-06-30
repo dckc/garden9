@@ -1,10 +1,10 @@
 # Garden bulletin
 
-_As of 2026-06-30T01:41:02Z_
+_As of 2026-06-30T01:43:49Z_
 
 ## Latest
 
-No jobs moved since the last bulletin — the board shows 12 queued clone-keeper hardening tasks waiting to be claimed and nothing currently in flight.
+Seven new directives for [dctinybrain/jesc24#8](https://github.com/dctinybrain/jesc24/pull/8) landed this cycle — six attention items and one review — making that PR the dominant signal on the board. Alongside them, three self-heal jobs arrived targeting `scripts/jobs/triager.sh`: a wrong `GARDEN_REPOS` default (pointing at `$GARDEN_ROOT/repos` instead of `$GARDEN_ROOT/worktrees`) and bare-clone skip-rather-than-die gaps for both the agoric-labs and dctinybrain jesc24 repos. A dead-lettered message also queued for pickup. Nothing was claimed or completed in this window; the gardener pool is idle against a 23-item todo queue that is now weighted toward jesc24 PR attention and clone-keeper hardening work.
 
 ## Parked for maintainer feedback
 
@@ -15,7 +15,15 @@ No jobs moved since the last bulletin — the board shows 12 queued clone-keeper
 (no pending maintainer messages)
 
 ## Board
-### todo (12)
+### todo (23)
+- [`dctinybrain-jesc24-pr8-2b9b686e`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/dctinybrain-jesc24-pr8-2b9b686e.md) — attention directive on dctinybrain/jesc24 PR #8
+- [`dctinybrain-jesc24-pr8-43dac6e5`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/dctinybrain-jesc24-pr8-43dac6e5.md) — attention directive on dctinybrain/jesc24 PR #8
+- [`dctinybrain-jesc24-pr8-4ac3221c`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/dctinybrain-jesc24-pr8-4ac3221c.md) — attention directive on dctinybrain/jesc24 PR #8
+- [`dctinybrain-jesc24-pr8-8cf8658c`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/dctinybrain-jesc24-pr8-8cf8658c.md) — attention directive on dctinybrain/jesc24 PR #8
+- [`dctinybrain-jesc24-pr8-a1945b78`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/dctinybrain-jesc24-pr8-a1945b78.md) — attention directive on dctinybrain/jesc24 PR #8
+- [`dctinybrain-jesc24-pr8-e8334684`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/dctinybrain-jesc24-pr8-e8334684.md) — attention directive on dctinybrain/jesc24 PR #8
+- [`dctinybrain-jesc24-pr8-review-6fb8daec`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/dctinybrain-jesc24-pr8-review-6fb8daec.md) — Review directive on dctinybrain/jesc24 PR #8
+- [`deadmail-20260630T014217Z-74e560`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/deadmail-20260630T014217Z-74e560.md) — Dead-lettered message — pick up its intent
 - [`improve-clone-keeper-auto-bootstrap`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-auto-bootstrap.md) — In scripts/jobs/clone-keeper.sh, the keep_clone function currently logs
 - [`improve-clone-keeper-auto-init`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-auto-init.md) — In scripts/jobs/clone-keeper.sh, extend the GARDEN_TRACKED_CLONES entry forma...
 - [`improve-clone-keeper-auto-reclone`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-auto-reclone.md) — In scripts/jobs/clone-keeper.sh, the keep_clone function (lines 78-81) logs W...
@@ -28,6 +36,9 @@ No jobs moved since the last bulletin — the board shows 12 queued clone-keeper
 - [`improve-clone-keeper-self-init`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-self-init.md) — In scripts/jobs/clone-keeper.sh, extend the GARDEN_TRACKED_CLONES entry forma...
 - [`improve-clone-keeper-self-reclone`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-self-reclone.md) — In scripts/jobs/clone-keeper.sh, extend GARDEN_TRACKED_CLONES from a 3-column...
 - [`improve-mentor-job-dedup`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-mentor-job-dedup.md) — In scripts/jobs/handlers/mentor-claude.sh, the loop that parses JOB blocks ca...
+- [`self-heal-fix-garden-triager-agoric-labs-jesc24-triager-skip-missing-bare-clone`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/self-heal-fix-garden-triager-agoric-labs-jesc24-triager-skip-missing-bare-clone.md) — In scripts/jobs/triager.sh line 32, change the hard die on a missing bare clo...
+- [`self-heal-fix-garden-triager-dctinybrain-jesc24-repos-default-points-worktrees`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/self-heal-fix-garden-triager-dctinybrain-jesc24-repos-default-points-worktrees.md) — Fix the wrong GARDEN_REPOS default in scripts/jobs/triager.sh (line 25) and s...
+- [`self-heal-fix-garden-triager-repos-default-wrong-dir`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/self-heal-fix-garden-triager-repos-default-wrong-dir.md) — scripts/jobs/triager.sh line 25 defaults GARDEN_REPOS to $GARDEN_ROOT/repos, ...
 
 ### doin (0)
 (none)
