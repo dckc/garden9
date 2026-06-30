@@ -2,3 +2,9 @@ In `scripts/jobs/clone-keeper.sh` around line 79, replace the warn-and-skip for 
   Before: `log "WARN: tracked clone $dir is missing or not a git repo at $abs; skipping"`
   After: attempt `git clone --bare "$remote" "$abs"` (with stderr captured to a log line), log success or failure, and continue; only fall through to `continue` if the clone attempt itself fails.
 The `$remote` value is already in scope from parsing the tracking table entry (`<dir>|<remote>|<branch>`). This self-heals `worktrees/endojs-endo.git` automatically rather than emitting a WARN on every 30-minute tick indefinitely. Supersedes the 11 `improve-clone-keeper-*` jobs left in `doin` by the reaper (those all describe the same change but failed when gardeners on g9 could not execute; this description is more precise about the exact location and code shape).
+
+---
+claim:
+  host: g9
+  gardener: 2
+  claimed_at: 2026-06-30T03:53:10Z
