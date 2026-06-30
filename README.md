@@ -1,10 +1,10 @@
 # Garden bulletin
 
-_As of 2026-06-30T09:01:52Z_
+_As of 2026-06-30T09:02:57Z_
 
 ## Latest
 
-The board is flooded with dead-lettered messages: 51 are actively claimed in `doin` and more are completing in `tada`, with gardeners repeatedly reporting that the maintainer inbox is unavailable and their notifications have nowhere to land. No substantive work items entered or exited the board in this interval — `todo` is empty and the sole non-deadmail completion visible is `improve-clone-keeper-url-autoinit`, which pushed successfully. The two long-parked [dapp-stake-control#54](https://github.com/agoric-labs/dapp-stake-control/pull/54) and [#55](https://github.com/agoric-labs/dapp-stake-control/pull/55) remain awaiting your review. The dead-letter accumulation suggests the maintainer inbox session is down and worth restarting.
+The board is effectively stalled: the only transition since the last bulletin was one deadmail job completing after reporting that the upgrade-ready signal is set (`~/.garden-state/deploy/upgrade-ready`), which means a garden deploy is pending but cannot proceed without the maintainer's inbox — itself unavailable, which is why 50 dead-lettered messages have piled up in `doin` throughout today with no gardener able to drain them. No PR pipeline work is in flight; the sole items awaiting attention remain the two long-parked [dapp-stake-control#54](https://github.com/agoric-labs/dapp-stake-control/pull/54) and [dapp-stake-control#55](https://github.com/agoric-labs/dapp-stake-control/pull/55) (both over a year without review). The maintainer should check whether the inbox session needs to be restarted and consider triggering a deploy manually via `scripts/jobs/deploy-garden.sh` if the upgrade-ready signal is intended.
 
 ## Parked for maintainer feedback
 
@@ -18,7 +18,7 @@ The board is flooded with dead-lettered messages: 51 are actively claimed in `do
 ### todo (0)
 (none)
 
-### doin (51)
+### doin (50)
 - [`deadmail-20260630T031325Z-3454f5`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T031325Z-3454f5.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T034324Z-31124d`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T034324Z-31124d.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T040326Z-e8f19e`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T040326Z-e8f19e.md) — Dead-lettered message — pick up its intent
@@ -69,15 +69,14 @@ The board is flooded with dead-lettered messages: 51 are actively claimed in `do
 - [`deadmail-20260630T084317Z-a93140`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T084317Z-a93140.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T085306Z-f44aee`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T085306Z-f44aee.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T085600Z-6bb434`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T085600Z-6bb434.md) — Dead-lettered message — pick up its intent
-- [`deadmail-20260630T085833Z-c2e58c`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T085833Z-c2e58c.md) — Dead-lettered message — pick up its intent
 
-### tada (21)
+### tada (22)
+- [`deadmail-20260630T085833Z-c2e58c`](https://github.com/kriskowal/garden/blob/journal2/jobs/tada/deadmail-20260630T085833Z-c2e58c.md) — The upgrade-ready signal is set at /home/dckc/.garden-state/deploy/upgrade-re...
 - [`deadmail-20260630T085552Z-4d01e0`](https://github.com/kriskowal/garden/blob/journal2/jobs/tada/deadmail-20260630T085552Z-4d01e0.md) — The maintainer inbox is still unavailable (dead-lettered again). Since this i...
 - [`deadmail-20260630T074329Z-260d32`](https://github.com/kriskowal/garden/blob/journal2/jobs/tada/deadmail-20260630T074329Z-260d32.md) — The message dead-lettered again (maintainer inbox still absent) — the garden'...
 - [`deadmail-20260630T085303Z-16c5ea`](https://github.com/kriskowal/garden/blob/journal2/jobs/tada/deadmail-20260630T085303Z-16c5ea.md) — No inbox messages. My attempt to notify the maintainer also dead-lettered (ma...
 - [`deadmail-20260630T085332Z-4e4e1c`](https://github.com/kriskowal/garden/blob/journal2/jobs/tada/deadmail-20260630T085332Z-4e4e1c.md) — The maintainer's inbox is still not available (likely no active session). The...
-- [`improve-clone-keeper-url-autoinit`](https://github.com/kriskowal/garden/blob/journal2/jobs/tada/improve-clone-keeper-url-autoinit.md) — Pushed successfully. Here is the completion report:
-- … and 16 more
+- … and 17 more
 
 ## Plan queue (parked — not claimable until promoted)
 ### awaiting go-ahead (maintainer authorization)
