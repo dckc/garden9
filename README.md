@@ -1,10 +1,10 @@
 # Garden bulletin
 
-_As of 2026-06-30T01:39:44Z_
+_As of 2026-06-30T01:41:02Z_
 
 ## Latest
 
-Activity since the last bulletin was minimal — a single researcher result landed (`entries/2026/06/30/013829Z-result-researcher-0aa35a.md`) with no board claims or PR-pipeline movement. The todo queue has filled with twelve clone-keeper hardening jobs covering auto-bootstrap, reclone, and self-heal scenarios, none yet claimed. Two long-parked agoric-labs PRs — [dapp-stake-control#54](https://github.com/agoric-labs/dapp-stake-control/pull/54) and [dapp-stake-control#55](https://github.com/agoric-labs/dapp-stake-control/pull/55) — remain awaiting maintainer feedback at 383 days.
+No jobs moved since the last bulletin — the board shows 12 queued clone-keeper hardening tasks waiting to be claimed and nothing currently in flight.
 
 ## Parked for maintainer feedback
 
@@ -21,8 +21,8 @@ Activity since the last bulletin was minimal — a single researcher result land
 - [`improve-clone-keeper-auto-reclone`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-auto-reclone.md) — In scripts/jobs/clone-keeper.sh, the keep_clone function (lines 78-81) logs W...
 - [`improve-clone-keeper-bootstrap-missing-bare-clone`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-bootstrap-missing-bare-clone.md) — Harden scripts/jobs/clone-keeper.sh so a missing tracked bare clone is determ...
 - [`improve-clone-keeper-missing-init`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-missing-init.md) — scripts/jobs/clone-keeper.sh warns and skips when a tracked bare clone path i...
-- [`improve-clone-keeper-reclone-missing`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-reclone-missing.md) — In scripts/jobs/clone-keeper.sh, the keep_clone function (line 78-81) warns and
 - [`improve-clone-keeper-reclone`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-reclone.md) — Harden scripts/jobs/clone-keeper.sh against a permanently missing bare clone.
+- [`improve-clone-keeper-reclone-missing`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-reclone-missing.md) — In scripts/jobs/clone-keeper.sh, the keep_clone function (line 78-81) warns and
 - [`improve-clone-keeper-recreate-missing`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-recreate-missing.md) — scripts/ clone-keeper (scripts/jobs/clone-keeper.sh or equivalent) currently
 - [`improve-clone-keeper-self-heal`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-self-heal.md) — In scripts/jobs/clone-keeper.sh, extend the GARDEN_TRACKED_CLONES line format
 - [`improve-clone-keeper-self-init`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-self-init.md) — In scripts/jobs/clone-keeper.sh, extend the GARDEN_TRACKED_CLONES entry forma...
@@ -51,7 +51,7 @@ Activity since the last bulletin was minimal — a single researcher result land
 (none)
 
 ## Watch set
-(none)
+agoric-labs-jesc24 dckc-jesc24 dctinybrain-jesc24
 
 ## Hosts
 (no hosts configured)
