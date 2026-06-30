@@ -543,3 +543,12 @@ Inspect via `git -C journal cat-file -p 7aa0f1bb3c3274a198446dec9116c1912297460d
 - Context: gardener-3 on g9: job 'improve-clone-keeper-bootstrap-missing-bare-clone' handler exited rc=1
 
 Inspect via `git -C journal cat-file -p 57efdbc7a2c31532e698527727500041b276de35`.
+
+## lane 0 -- handler-nonzero failure at 2026-06-30T05:13:58Z
+
+- PR: (none)
+- State: handler-nonzero
+- Transcript SHA: dea89c11d3c46c8fe45bc579c533de9539f0cf73
+- Context: gardener-1 on g9: job 'deadmail-20260630T025027Z-252212' handler exited rc=1
+
+Inspect via `git -C journal cat-file -p dea89c11d3c46c8fe45bc579c533de9539f0cf73`.
