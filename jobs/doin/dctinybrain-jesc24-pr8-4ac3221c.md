@@ -13,3 +13,9 @@ discipline. The excerpt below is for human context only:
 also reiterate the provenance note there: ``` // Subsets of JavaScript, starting from the grammar as defined at // http://www.ecma-international.org/ecma-262/9.0/#sec-grammar-summary ```  
 
 <!-- garden-reaped: 1 -->
+
+---
+claim:
+  host: g9
+  gardener: 2
+  claimed_at: 2026-06-30T02:53:07Z
