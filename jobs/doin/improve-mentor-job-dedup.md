@@ -5,3 +5,9 @@ Fix: after extracting `$base` from each JOB block, derive a slug prefix by takin
 Also consolidate the 8 existing duplicate todo files into one canonical entry (e.g., `improve-clone-keeper-reclone.md`) and delete the other seven so the board is clean for the gardener that picks it up.
 
 <!-- garden-reaped: 1 -->
+
+---
+claim:
+  host: g9
+  gardener: 3
+  claimed_at: 2026-06-30T02:54:08Z
