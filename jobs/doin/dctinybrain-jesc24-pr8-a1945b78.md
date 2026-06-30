@@ -13,3 +13,9 @@ discipline. The excerpt below is for human context only:
 why this discussion of String literals in this file at all if it's imported from QuasiJustin? 
 
 <!-- garden-reaped: 3 -->
+
+---
+claim:
+  host: g9
+  gardener: 1
+  claimed_at: 2026-06-30T05:13:28Z
