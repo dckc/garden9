@@ -318,3 +318,12 @@ Inspect via `git -C journal cat-file -p cd444e73aa2fbfa1b54adddc48bb33d55793660b
 - Context: gardener-4 on g9: job 'improve-clone-keeper-auto-bootstrap' handler exited rc=1
 
 Inspect via `git -C journal cat-file -p b0e74eca24624d3e4438e29b7cfe950fef661435`.
+
+## lane 0 -- handler-nonzero failure at 2026-06-30T04:06:21Z
+
+- PR: (none)
+- State: handler-nonzero
+- Transcript SHA: fc2040cd70fa185da291278885f4a2f2d091a053
+- Context: gardener-4 on g9: job 'improve-clone-keeper-auto-init' handler exited rc=1
+
+Inspect via `git -C journal cat-file -p fc2040cd70fa185da291278885f4a2f2d091a053`.
