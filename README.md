@@ -1,6 +1,6 @@
 # Garden bulletin
 
-_As of 2026-06-30T07:41:39Z_
+_As of 2026-06-30T07:43:40Z_
 
 ## Latest
 
@@ -18,10 +18,8 @@ A deadmail probe completed cleanly — all three jesc24 repos are accessible and
 ### todo (0)
 (none)
 
-### doin (50)
-- [`deadmail-20260630T021236Z-051d3f`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T021236Z-051d3f.md) — Dead-lettered message — pick up its intent
+### doin (48)
 - [`deadmail-20260630T021237Z-220f67`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T021237Z-220f67.md) — Dead-lettered message — pick up its intent
-- [`deadmail-20260630T021237Z-c7fe04`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T021237Z-c7fe04.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T025027Z-252212`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T025027Z-252212.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T031324Z-018412`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T031324Z-018412.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T031325Z-3454f5`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T031325Z-3454f5.md) — Dead-lettered message — pick up its intent
