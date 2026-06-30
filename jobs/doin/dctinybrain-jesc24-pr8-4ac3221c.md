@@ -11,3 +11,9 @@ discipline. The excerpt below is for human context only:
 
 ----- comment excerpt (untrusted, truncated) -----
 also reiterate the provenance note there: ``` // Subsets of JavaScript, starting from the grammar as defined at // http://www.ecma-international.org/ecma-262/9.0/#sec-grammar-summary ```  
+
+---
+claim:
+  host: g9
+  gardener: 1
+  claimed_at: 2026-06-30T01:46:13Z
