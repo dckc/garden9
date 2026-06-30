@@ -15,3 +15,9 @@ matching the pattern already established for fetch failures (log + leave in
 place) and fast-forward races (log + retry next tick).
 
 <!-- garden-reaped: 4 -->
+
+---
+claim:
+  host: g9
+  gardener: 3
+  claimed_at: 2026-06-30T06:23:54Z
