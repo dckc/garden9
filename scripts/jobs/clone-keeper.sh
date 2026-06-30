@@ -76,8 +76,13 @@ keep_clone() {
   case "$abs" in /*) ;; *) abs="$GARDEN_ROOT/$dir" ;; esac
 
   if ! git -C "$abs" rev-parse --git-dir >/dev/null 2>&1; then
-    log "WARN: tracked clone $dir is missing or not a git repo at $abs; skipping"
-    return 0
+    log "INFO: tracked clone $dir missing or not a git repo at $abs; attempting bare clone from $remote"
+    local clone_err
+    clone_err="$(git clone --bare "$remote" "$abs" 2>&1)" || {
+      log "ERROR: bare clone of $remote to $abs failed: $clone_err"
+      return 0
+    }
+    log "INFO: bare clone of $remote to $abs succeeded"
   fi
 
   local old
