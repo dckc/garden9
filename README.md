@@ -1,6 +1,6 @@
 # Garden bulletin
 
-_As of 2026-06-30T03:43:27Z_
+_As of 2026-06-30T03:45:36Z_
 
 ## Latest
 
@@ -18,7 +18,7 @@ Seven new directives for [dctinybrain/jesc24#8](https://github.com/dctinybrain/j
 ### todo (0)
 (none)
 
-### doin (32)
+### doin (33)
 - [`dctinybrain-jesc24-pr8-2b9b686e`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/dctinybrain-jesc24-pr8-2b9b686e.md) — attention directive on dctinybrain/jesc24 PR #8
 - [`dctinybrain-jesc24-pr8-43dac6e5`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/dctinybrain-jesc24-pr8-43dac6e5.md) — attention directive on dctinybrain/jesc24 PR #8
 - [`dctinybrain-jesc24-pr8-4ac3221c`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/dctinybrain-jesc24-pr8-4ac3221c.md) — attention directive on dctinybrain/jesc24 PR #8
@@ -36,13 +36,14 @@ Seven new directives for [dctinybrain/jesc24#8](https://github.com/dctinybrain/j
 - [`deadmail-20260630T031324Z-018412`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T031324Z-018412.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T031325Z-3454f5`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T031325Z-3454f5.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T031325Z-8e3744`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T031325Z-8e3744.md) — Dead-lettered message — pick up its intent
+- [`deadmail-20260630T034324Z-31124d`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T034324Z-31124d.md) — Dead-lettered message — pick up its intent
 - [`improve-clone-keeper-auto-bootstrap`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-auto-bootstrap.md) — In scripts/jobs/clone-keeper.sh, the keep_clone function currently logs
 - [`improve-clone-keeper-auto-init`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-auto-init.md) — In scripts/jobs/clone-keeper.sh, extend the GARDEN_TRACKED_CLONES entry forma...
 - [`improve-clone-keeper-auto-reclone`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-auto-reclone.md) — In scripts/jobs/clone-keeper.sh, the keep_clone function (lines 78-81) logs W...
 - [`improve-clone-keeper-bootstrap-missing-bare-clone`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-bootstrap-missing-bare-clone.md) — Harden scripts/jobs/clone-keeper.sh so a missing tracked bare clone is determ...
 - [`improve-clone-keeper-missing-init`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-missing-init.md) — scripts/jobs/clone-keeper.sh warns and skips when a tracked bare clone path i...
-- [`improve-clone-keeper-reclone-missing`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-reclone-missing.md) — In scripts/jobs/clone-keeper.sh, the keep_clone function (line 78-81) warns and
 - [`improve-clone-keeper-reclone`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-reclone.md) — Harden scripts/jobs/clone-keeper.sh against a permanently missing bare clone.
+- [`improve-clone-keeper-reclone-missing`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-reclone-missing.md) — In scripts/jobs/clone-keeper.sh, the keep_clone function (line 78-81) warns and
 - [`improve-clone-keeper-recreate-missing`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-recreate-missing.md) — scripts/ clone-keeper (scripts/jobs/clone-keeper.sh or equivalent) currently
 - [`improve-clone-keeper-self-heal`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-self-heal.md) — In scripts/jobs/clone-keeper.sh, extend the GARDEN_TRACKED_CLONES line format
 - [`improve-clone-keeper-self-init`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-self-init.md) — In scripts/jobs/clone-keeper.sh, extend the GARDEN_TRACKED_CLONES entry forma...
