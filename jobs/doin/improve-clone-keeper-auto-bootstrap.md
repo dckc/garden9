@@ -25,3 +25,9 @@ the clone was created and `local_master` equals upstream tip.
 Why: `worktrees/endojs-endo.git` is currently absent, causing a WARN on every
 ~30-minute tick (Jun 29 23:30:23) with no recovery.  A bare-clone bootstrap is
 deterministic, needs no LLM judgment, and removes the manual step entirely.
+
+---
+claim:
+  host: g9
+  gardener: 5
+  claimed_at: 2026-06-30T01:45:22Z
