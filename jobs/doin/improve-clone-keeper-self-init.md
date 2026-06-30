@@ -3,3 +3,9 @@ In `scripts/jobs/clone-keeper.sh`, extend the `GARDEN_TRACKED_CLONES` entry form
 This makes the keeper self-healing on a new host or after accidental deletion and silences the recurring 30-minute WARN without any agent involvement.
 
 <!-- garden-reaped: 1 -->
+
+---
+claim:
+  host: g9
+  gardener: 5
+  claimed_at: 2026-06-30T02:53:37Z
