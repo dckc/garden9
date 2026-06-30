@@ -102,3 +102,12 @@ Inspect via `git -C journal cat-file -p b2793907904217825e980057e3b797a039c92422
 - Context: gardener-3 on g9: job 'improve-clone-keeper-recreate-missing' handler exited rc=1
 
 Inspect via `git -C journal cat-file -p b2793907904217825e980057e3b797a039c92422`.
+
+## lane 0 -- handler-nonzero failure at 2026-06-30T01:47:14Z
+
+- PR: (none)
+- State: handler-nonzero
+- Transcript SHA: b2793907904217825e980057e3b797a039c92422
+- Context: gardener-3 on g9: job 'self-heal-fix-garden-triager-dctinybrain-jesc24-repos-default-points-worktrees' handler exited rc=1
+
+Inspect via `git -C journal cat-file -p b2793907904217825e980057e3b797a039c92422`.
