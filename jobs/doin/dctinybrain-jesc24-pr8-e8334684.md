@@ -11,3 +11,9 @@ discipline. The excerpt below is for human context only:
 
 ----- comment excerpt (untrusted, truncated) -----
 in that `quasi-jessie.js.ts` file, the first production I see is ``` start <- _WS moduleBody _EOF ``` Can we have them in roughly the same order here? 
+
+---
+claim:
+  host: g9
+  gardener: 3
+  claimed_at: 2026-06-30T01:45:20Z
