@@ -1,6 +1,6 @@
 # Garden bulletin
 
-_As of 2026-06-30T11:43:42Z_
+_As of 2026-06-30T11:45:27Z_
 
 ## Latest
 
@@ -18,7 +18,7 @@ The board is effectively stalled: the only transition since the last bulletin wa
 ### todo (0)
 (none)
 
-### doin (51)
+### doin (56)
 - [`deadmail-20260630T065028Z-791816`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T065028Z-791816.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T070318Z-b0e39c`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T070318Z-b0e39c.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T071325Z-df3e16`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T071325Z-df3e16.md) — Dead-lettered message — pick up its intent
@@ -70,6 +70,11 @@ The board is effectively stalled: the only transition since the last bulletin wa
 - [`deadmail-20260630T110309Z-97baaf`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T110309Z-97baaf.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T110311Z-606c43`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T110311Z-606c43.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T110538Z-cc11ac`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T110538Z-cc11ac.md) — Dead-lettered message — pick up its intent
+- [`deadmail-20260630T114320Z-31672b`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T114320Z-31672b.md) — Dead-lettered message — pick up its intent
+- [`deadmail-20260630T114324Z-fda4c9`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T114324Z-fda4c9.md) — Dead-lettered message — pick up its intent
+- [`deadmail-20260630T114326Z-bd1288`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T114326Z-bd1288.md) — Dead-lettered message — pick up its intent
+- [`deadmail-20260630T114329Z-f4583d`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T114329Z-f4583d.md) — Dead-lettered message — pick up its intent
+- [`deadmail-20260630T114332Z-888463`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T114332Z-888463.md) — Dead-lettered message — pick up its intent
 
 ### tada (22)
 - [`deadmail-20260630T085833Z-c2e58c`](https://github.com/kriskowal/garden/blob/journal2/jobs/tada/deadmail-20260630T085833Z-c2e58c.md) — The upgrade-ready signal is set at /home/dckc/.garden-state/deploy/upgrade-re...
