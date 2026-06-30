@@ -9,3 +9,9 @@ notices" failure into a self-healing one.  The WARN line that surfaced this:
   a git repo at /home/dckc/worktrees/endojs-endo.git; skipping
 
 <!-- garden-reaped: 3 -->
+
+---
+claim:
+  host: g9
+  gardener: 4
+  claimed_at: 2026-06-30T05:13:53Z
