@@ -345,3 +345,12 @@ Inspect via `git -C journal cat-file -p 4e0c3fa37d9d0ee5062965875ccaad6393fabcf4
 - Context: gardener-3 on g9: job 'improve-clone-keeper-reclone-missing' handler exited rc=1
 
 Inspect via `git -C journal cat-file -p 03f05765267175c1f59d00e8316eae7e78061c39`.
+
+## lane 0 -- handler-nonzero failure at 2026-06-30T04:06:43Z
+
+- PR: (none)
+- State: handler-nonzero
+- Transcript SHA: 702a4d722eb38f9536849418119998d1f50a86a6
+- Context: gardener-4 on g9: job 'improve-clone-keeper-recreate-missing' handler exited rc=1
+
+Inspect via `git -C journal cat-file -p 702a4d722eb38f9536849418119998d1f50a86a6`.
