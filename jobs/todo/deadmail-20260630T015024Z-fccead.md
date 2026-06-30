@@ -20,10 +20,4 @@ self-heal: garden-mentor exited rc=1 with no scoped fix. Capture: 4cee186c18742e
 
 ----- END ORIGINAL MESSAGE -----
 
-<!-- garden-reaped: 1 -->
-
----
-claim:
-  host: g9
-  gardener: 2
-  claimed_at: 2026-06-30T03:03:17Z
+<!-- garden-reaped: 2 -->
