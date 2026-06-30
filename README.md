@@ -1,6 +1,6 @@
 # Garden bulletin
 
-_As of 2026-06-30T01:47:27Z_
+_As of 2026-06-30T01:54:25Z_
 
 ## Latest
 
@@ -18,7 +18,7 @@ Seven new directives for [dctinybrain/jesc24#8](https://github.com/dctinybrain/j
 ### todo (0)
 (none)
 
-### doin (23)
+### doin (24)
 - [`dctinybrain-jesc24-pr8-2b9b686e`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/dctinybrain-jesc24-pr8-2b9b686e.md) — attention directive on dctinybrain/jesc24 PR #8
 - [`dctinybrain-jesc24-pr8-43dac6e5`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/dctinybrain-jesc24-pr8-43dac6e5.md) — attention directive on dctinybrain/jesc24 PR #8
 - [`dctinybrain-jesc24-pr8-4ac3221c`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/dctinybrain-jesc24-pr8-4ac3221c.md) — attention directive on dctinybrain/jesc24 PR #8
@@ -27,6 +27,7 @@ Seven new directives for [dctinybrain/jesc24#8](https://github.com/dctinybrain/j
 - [`dctinybrain-jesc24-pr8-e8334684`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/dctinybrain-jesc24-pr8-e8334684.md) — attention directive on dctinybrain/jesc24 PR #8
 - [`dctinybrain-jesc24-pr8-review-6fb8daec`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/dctinybrain-jesc24-pr8-review-6fb8daec.md) — Review directive on dctinybrain/jesc24 PR #8
 - [`deadmail-20260630T014217Z-74e560`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T014217Z-74e560.md) — Dead-lettered message — pick up its intent
+- [`deadmail-20260630T015024Z-fccead`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T015024Z-fccead.md) — Dead-lettered message — pick up its intent
 - [`improve-clone-keeper-auto-bootstrap`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-auto-bootstrap.md) — In scripts/jobs/clone-keeper.sh, the keep_clone function currently logs
 - [`improve-clone-keeper-auto-init`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-auto-init.md) — In scripts/jobs/clone-keeper.sh, extend the GARDEN_TRACKED_CLONES entry forma...
 - [`improve-clone-keeper-auto-reclone`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-auto-reclone.md) — In scripts/jobs/clone-keeper.sh, the keep_clone function (lines 78-81) logs W...
