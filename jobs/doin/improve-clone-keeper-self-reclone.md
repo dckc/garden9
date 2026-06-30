@@ -10,3 +10,9 @@ Update `scripts/jobs/test/clone-keeper-test.sh` to cover the re-clone path: prov
 Why: the missing `worktrees/endojs-endo.git` bare clone is the only failure in this digest, and it will repeat every 30 minutes until resolved by hand. Self-healing via `git clone --bare` is purely deterministic (no LLM judgment), and the URL is stable and known. This moves clone restoration off agent discretion and onto the script.
 
 <!-- garden-reaped: 2 -->
+
+---
+claim:
+  host: g9
+  gardener: 2
+  claimed_at: 2026-06-30T04:07:04Z
