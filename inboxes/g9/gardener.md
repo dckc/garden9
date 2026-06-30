@@ -354,3 +354,12 @@ Inspect via `git -C journal cat-file -p 03f05765267175c1f59d00e8316eae7e78061c39
 - Context: gardener-4 on g9: job 'improve-clone-keeper-recreate-missing' handler exited rc=1
 
 Inspect via `git -C journal cat-file -p 702a4d722eb38f9536849418119998d1f50a86a6`.
+
+## lane 0 -- handler-nonzero failure at 2026-06-30T04:06:56Z
+
+- PR: (none)
+- State: handler-nonzero
+- Transcript SHA: 3351864e20705c44ed0260f8a42c246e574d4adb
+- Context: gardener-2 on g9: job 'deadmail-20260630T025027Z-252212' handler exited rc=1
+
+Inspect via `git -C journal cat-file -p 3351864e20705c44ed0260f8a42c246e574d4adb`.
