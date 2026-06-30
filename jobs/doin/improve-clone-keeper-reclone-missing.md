@@ -22,3 +22,9 @@ clones fresh without agent intervention; a missing clone should be recreated
 deterministically, not left broken until a human notices.
 
 <!-- garden-reaped: 4 -->
+
+---
+claim:
+  host: g9
+  gardener: 4
+  claimed_at: 2026-06-30T06:23:39Z
