@@ -1,6 +1,6 @@
 # Garden bulletin
 
-_As of 2026-06-30T12:53:35Z_
+_As of 2026-06-30T12:58:36Z_
 
 ## Latest
 
@@ -18,7 +18,7 @@ The board is effectively stalled: the only transition since the last bulletin wa
 ### todo (0)
 (none)
 
-### doin (55)
+### doin (57)
 - [`deadmail-20260630T071327Z-27fec4`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T071327Z-27fec4.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T071331Z-d66ade`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T071331Z-d66ade.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T071531Z-c9dd6f`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T071531Z-c9dd6f.md) — Dead-lettered message — pick up its intent
@@ -74,6 +74,8 @@ The board is effectively stalled: the only transition since the last bulletin wa
 - [`deadmail-20260630T120610Z-9a4db4`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T120610Z-9a4db4.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T123326Z-3ac90d`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T123326Z-3ac90d.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T124326Z-9b16ef`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T124326Z-9b16ef.md) — Dead-lettered message — pick up its intent
+- [`deadmail-20260630T125307Z-6a97ea`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T125307Z-6a97ea.md) — Dead-lettered message — pick up its intent
+- [`deadmail-20260630T125311Z-2d1a7d`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T125311Z-2d1a7d.md) — Dead-lettered message — pick up its intent
 
 ### tada (22)
 - [`deadmail-20260630T085833Z-c2e58c`](https://github.com/kriskowal/garden/blob/journal2/jobs/tada/deadmail-20260630T085833Z-c2e58c.md) — The upgrade-ready signal is set at /home/dckc/.garden-state/deploy/upgrade-re...
