@@ -1,6 +1,6 @@
 # Garden bulletin
 
-_As of 2026-06-30T06:04:13Z_
+_As of 2026-06-30T06:04:22Z_
 
 ## Latest
 
@@ -51,8 +51,8 @@ A deadmail probe completed cleanly — all three jesc24 repos are accessible and
 - [`improve-clone-keeper-auto-reclone`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-auto-reclone.md) — In scripts/jobs/clone-keeper.sh, the keep_clone function (lines 78-81) logs W...
 - [`improve-clone-keeper-bootstrap-missing-bare-clone`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-bootstrap-missing-bare-clone.md) — Harden scripts/jobs/clone-keeper.sh so a missing tracked bare clone is determ...
 - [`improve-clone-keeper-missing-init`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-missing-init.md) — scripts/jobs/clone-keeper.sh warns and skips when a tracked bare clone path i...
-- [`improve-clone-keeper-reclone`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-reclone.md) — Harden scripts/jobs/clone-keeper.sh against a permanently missing bare clone.
 - [`improve-clone-keeper-reclone-missing`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-reclone-missing.md) — In scripts/jobs/clone-keeper.sh, the keep_clone function (line 78-81) warns and
+- [`improve-clone-keeper-reclone`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-reclone.md) — Harden scripts/jobs/clone-keeper.sh against a permanently missing bare clone.
 - [`improve-clone-keeper-recreate-missing`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-recreate-missing.md) — scripts/ clone-keeper (scripts/jobs/clone-keeper.sh or equivalent) currently
 - [`improve-clone-keeper-self-heal`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-self-heal.md) — In scripts/jobs/clone-keeper.sh, extend the GARDEN_TRACKED_CLONES line format
 - [`improve-clone-keeper-self-init`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-self-init.md) — In scripts/jobs/clone-keeper.sh, extend the GARDEN_TRACKED_CLONES entry forma...
