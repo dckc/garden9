@@ -1,10 +1,10 @@
 # Garden bulletin
 
-_As of 2026-06-30T08:54:31Z_
+_As of 2026-06-30T08:56:31Z_
 
 ## Latest
 
-The board's `doin` queue is saturated with 50 dead-lettered messages accumulated throughout today, all awaiting intent recovery — this volume suggests a systemic delivery failure rather than isolated drops and warrants a look at the deadmail root cause. On the productive side, `improve-triager-missing-clone-skip` closed out cleanly (the gardener recognized commit `b5b340e45` had already landed the fix) and a new job `improve-clone-keeper-url-autoinit` was claimed to extend clone-keeper with URL auto-initialization. Work in `dctinybrain/jesc24` also advanced, with an ECMA-262 provenance note committed to `theories/jessie/quasi_jessie.v` against PR #8 in that fork.
+`improve-clone-keeper-url-autoinit` completed and pushed successfully, landing a garden infrastructure improvement to the clone keeper's URL auto-init behavior; `improve-triager-missing-clone-skip` was already in place (commit `b5b340e45`). The board is otherwise dominated by a flood of 50 dead-letter messages in `doin`, with completions noting that the maintainer inbox has been unavailable throughout the cycle — no active liaison session was reachable for notification. No PR pipeline work moved. The two long-parked [agoric-labs/dapp-stake-control#54](https://github.com/agoric-labs/dapp-stake-control/pull/54) and [#55](https://github.com/agoric-labs/dapp-stake-control/pull/55) remain awaiting maintainer feedback at 384 days.
 
 ## Parked for maintainer feedback
 
@@ -68,15 +68,15 @@ The board's `doin` queue is saturated with 50 dead-lettered messages accumulated
 - [`deadmail-20260630T080353Z-ac4f84`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T080353Z-ac4f84.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T082027Z-c8cf0e`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T082027Z-c8cf0e.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T084317Z-a93140`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T084317Z-a93140.md) — Dead-lettered message — pick up its intent
-- [`improve-clone-keeper-url-autoinit`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-url-autoinit.md) — Extend the tracked-clones spec in scripts/jobs/clone-keeper.sh with an option...
+- [`deadmail-20260630T085306Z-f44aee`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T085306Z-f44aee.md) — Dead-lettered message — pick up its intent
 
-### tada (16)
+### tada (19)
+- [`deadmail-20260630T085303Z-16c5ea`](https://github.com/kriskowal/garden/blob/journal2/jobs/tada/deadmail-20260630T085303Z-16c5ea.md) — No inbox messages. My attempt to notify the maintainer also dead-lettered (ma...
+- [`deadmail-20260630T085332Z-4e4e1c`](https://github.com/kriskowal/garden/blob/journal2/jobs/tada/deadmail-20260630T085332Z-4e4e1c.md) — The maintainer's inbox is still not available (likely no active session). The...
+- [`improve-clone-keeper-url-autoinit`](https://github.com/kriskowal/garden/blob/journal2/jobs/tada/improve-clone-keeper-url-autoinit.md) — Pushed successfully. Here is the completion report:
 - [`improve-triager-missing-clone-skip`](https://github.com/kriskowal/garden/blob/journal2/jobs/tada/improve-triager-missing-clone-skip.md) — The work is already done. Commit b5b340e45 ("triager: skip cleanly when bare ...
 - [`deadmail-20260630T074326Z-fe5757`](https://github.com/kriskowal/garden/blob/journal2/jobs/tada/deadmail-20260630T074326Z-fe5757.md) — The maintainer inbox is still unavailable (no active liaison session), so my ...
-- [`dctinybrain-jesc24-pr8-4ac3221c`](https://github.com/kriskowal/garden/blob/journal2/jobs/tada/dctinybrain-jesc24-pr8-4ac3221c.md) — Added ECMA-262 provenance note to theories/jessie/quasi_jessie.v in commit 18...
-- [`deadmail-20260630T035322Z-1d8a06`](https://github.com/kriskowal/garden/blob/journal2/jobs/tada/deadmail-20260630T035322Z-1d8a06.md) — All three repos are accessible and the probe passes. Here is the completion r...
-- [`improve-triager-skip-on-missing-clone`](https://github.com/kriskowal/garden/blob/journal2/jobs/tada/improve-triager-skip-on-missing-clone.md) — Completion report:
-- … and 11 more
+- … and 14 more
 
 ## Plan queue (parked — not claimable until promoted)
 ### awaiting go-ahead (maintainer authorization)
