@@ -1,6 +1,6 @@
 # Garden bulletin
 
-_As of 2026-06-30T07:13:49Z_
+_As of 2026-06-30T07:17:57Z_
 
 ## Latest
 
@@ -18,7 +18,7 @@ A deadmail probe completed cleanly — all three jesc24 repos are accessible and
 ### todo (0)
 (none)
 
-### doin (43)
+### doin (50)
 - [`dctinybrain-jesc24-pr8-2b9b686e`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/dctinybrain-jesc24-pr8-2b9b686e.md) — attention directive on dctinybrain/jesc24 PR #8
 - [`dctinybrain-jesc24-pr8-43dac6e5`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/dctinybrain-jesc24-pr8-43dac6e5.md) — attention directive on dctinybrain/jesc24 PR #8
 - [`dctinybrain-jesc24-pr8-a1945b78`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/dctinybrain-jesc24-pr8-a1945b78.md) — attention directive on dctinybrain/jesc24 PR #8
@@ -47,13 +47,20 @@ A deadmail probe completed cleanly — all three jesc24 repos are accessible and
 - [`deadmail-20260630T061507Z-1c58a4`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T061507Z-1c58a4.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T065028Z-791816`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T065028Z-791816.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T070318Z-b0e39c`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T070318Z-b0e39c.md) — Dead-lettered message — pick up its intent
+- [`deadmail-20260630T071325Z-df3e16`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T071325Z-df3e16.md) — Dead-lettered message — pick up its intent
+- [`deadmail-20260630T071327Z-27fec4`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T071327Z-27fec4.md) — Dead-lettered message — pick up its intent
+- [`deadmail-20260630T071329Z-d0d4f2`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T071329Z-d0d4f2.md) — Dead-lettered message — pick up its intent
+- [`deadmail-20260630T071331Z-d66ade`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T071331Z-d66ade.md) — Dead-lettered message — pick up its intent
+- [`deadmail-20260630T071531Z-c9dd6f`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T071531Z-c9dd6f.md) — Dead-lettered message — pick up its intent
+- [`deadmail-20260630T071533Z-498d63`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T071533Z-498d63.md) — Dead-lettered message — pick up its intent
+- [`deadmail-20260630T071533Z-6ce8c7`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T071533Z-6ce8c7.md) — Dead-lettered message — pick up its intent
 - [`improve-clone-keeper-auto-bootstrap`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-auto-bootstrap.md) — In scripts/jobs/clone-keeper.sh, the keep_clone function currently logs
 - [`improve-clone-keeper-auto-init`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-auto-init.md) — In scripts/jobs/clone-keeper.sh, extend the GARDEN_TRACKED_CLONES entry forma...
 - [`improve-clone-keeper-auto-reclone`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-auto-reclone.md) — In scripts/jobs/clone-keeper.sh, the keep_clone function (lines 78-81) logs W...
 - [`improve-clone-keeper-bootstrap-missing-bare-clone`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-bootstrap-missing-bare-clone.md) — Harden scripts/jobs/clone-keeper.sh so a missing tracked bare clone is determ...
 - [`improve-clone-keeper-missing-init`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-missing-init.md) — scripts/jobs/clone-keeper.sh warns and skips when a tracked bare clone path i...
-- [`improve-clone-keeper-reclone-missing`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-reclone-missing.md) — In scripts/jobs/clone-keeper.sh, the keep_clone function (line 78-81) warns and
 - [`improve-clone-keeper-reclone`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-reclone.md) — Harden scripts/jobs/clone-keeper.sh against a permanently missing bare clone.
+- [`improve-clone-keeper-reclone-missing`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-reclone-missing.md) — In scripts/jobs/clone-keeper.sh, the keep_clone function (line 78-81) warns and
 - [`improve-clone-keeper-recreate-missing`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-recreate-missing.md) — scripts/ clone-keeper (scripts/jobs/clone-keeper.sh or equivalent) currently
 - [`improve-clone-keeper-self-heal`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-self-heal.md) — In scripts/jobs/clone-keeper.sh, extend the GARDEN_TRACKED_CLONES line format
 - [`improve-clone-keeper-self-init`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-self-init.md) — In scripts/jobs/clone-keeper.sh, extend the GARDEN_TRACKED_CLONES entry forma...
