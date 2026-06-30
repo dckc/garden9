@@ -34,10 +34,4 @@ Why: the current WARN fires forever on `g9` because `endojs-endo.git` was never 
 With this change the first tick after the fix creates the clone and subsequent ticks stay quiet
 on the no-op path — consistent with the keeper's own "quiet on the no-op path" design goal.
 
-<!-- garden-reaped: 2 -->
-
----
-claim:
-  host: g9
-  gardener: 4
-  claimed_at: 2026-06-30T04:06:51Z
+<!-- garden-reaped: 3 -->

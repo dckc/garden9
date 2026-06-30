@@ -21,10 +21,4 @@ WARN every 30 minutes with no recovery. The clone-keeper's purpose is to keep ba
 clones fresh without agent intervention; a missing clone should be recreated
 deterministically, not left broken until a human notices.
 
-<!-- garden-reaped: 2 -->
-
----
-claim:
-  host: g9
-  gardener: 3
-  claimed_at: 2026-06-30T04:06:32Z
+<!-- garden-reaped: 3 -->

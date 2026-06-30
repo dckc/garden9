@@ -26,10 +26,4 @@ Why: `worktrees/endojs-endo.git` is currently absent, causing a WARN on every
 ~30-minute tick (Jun 29 23:30:23) with no recovery.  A bare-clone bootstrap is
 deterministic, needs no LLM judgment, and removes the manual step entirely.
 
-<!-- garden-reaped: 2 -->
-
----
-claim:
-  host: g9
-  gardener: 4
-  claimed_at: 2026-06-30T04:06:11Z
+<!-- garden-reaped: 3 -->

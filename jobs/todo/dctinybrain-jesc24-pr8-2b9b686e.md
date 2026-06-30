@@ -12,10 +12,4 @@ discipline. The excerpt below is for human context only:
 ----- comment excerpt (untrusted, truncated) -----
 This style of referring to non-terminals by their index in the grammar list is awkward. How about definitions such as ``` Definition expr = arrow_func       /// op_assign       /// assign_expr ... ``` or `exprRule` and then: ``` Definition grammar : Syntax.grammar := [ expr ; ...
 
-<!-- garden-reaped: 2 -->
-
----
-claim:
-  host: g9
-  gardener: 4
-  claimed_at: 2026-06-30T04:07:13Z
+<!-- garden-reaped: 3 -->

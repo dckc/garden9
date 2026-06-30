@@ -17,10 +17,4 @@ Also update the default in the script:
 This eliminates the recurring `WARN: tracked clone ... is missing` that fires every ~30 min and
 requires a human or agent to notice and manually `git clone --bare` the missing clone into place.
 
-<!-- garden-reaped: 2 -->
-
----
-claim:
-  host: g9
-  gardener: 4
-  claimed_at: 2026-06-30T04:06:18Z
+<!-- garden-reaped: 3 -->

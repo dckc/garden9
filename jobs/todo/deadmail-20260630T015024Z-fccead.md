@@ -13,17 +13,11 @@ intended_recipient: maintainer
 to: maintainer
 from_host: g9
 from: watchdog:self-heal-claude
-sent_at: 2026-06-30T02:50:27Z
-dead_lettered_at: 2026-06-30T02:50:27Z
+sent_at: 2026-06-30T01:50:24Z
+dead_lettered_at: 2026-06-30T01:50:24Z
 ---
-self-heal: garden-mentor exited rc=1 with no scoped fix. Capture: 8b8b976eaa1b38447cd318e1af5fe5c469595b10 (git -C /home/dckc/.garden-state/self-heal/journal cat-file -p 8b8b976eaa1b38447cd318e1af5fe5c469595b10). Diagnosis: You've hit your session limit · resets 3:50am (UTC)
+self-heal: garden-mentor exited rc=1 with no scoped fix. Capture: 4cee186c18742e48e8eaadb830c8c72082ebc8bf (git -C /home/dckc/.garden-state/self-heal/journal cat-file -p 4cee186c18742e48e8eaadb830c8c72082ebc8bf). Diagnosis: You've hit your session limit · resets 3:50am (UTC)
 
 ----- END ORIGINAL MESSAGE -----
 
-<!-- garden-reaped: 1 -->
-
----
-claim:
-  host: g9
-  gardener: 2
-  claimed_at: 2026-06-30T04:06:53Z
+<!-- garden-reaped: 3 -->

@@ -14,10 +14,4 @@ This turns a recurring every-30-minute WARN that requires manual intervention
 matching the pattern already established for fetch failures (log + leave in
 place) and fast-forward races (log + retry next tick).
 
-<!-- garden-reaped: 2 -->
-
----
-claim:
-  host: g9
-  gardener: 5
-  claimed_at: 2026-06-30T04:06:47Z
+<!-- garden-reaped: 3 -->
