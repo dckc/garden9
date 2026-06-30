@@ -11,3 +11,9 @@ discipline. The excerpt below is for human context only:
 
 ----- comment excerpt (untrusted, truncated) -----
 In the .ts source, the section is labelled **Lexical syntax**. And it's at the end. Can we have things in roughly the same order? 
+
+---
+claim:
+  host: g9
+  gardener: 1
+  claimed_at: 2026-06-30T01:45:18Z
