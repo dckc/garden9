@@ -16,3 +16,9 @@ Also update the default in the script:
 
 This eliminates the recurring `WARN: tracked clone ... is missing` that fires every ~30 min and
 requires a human or agent to notice and manually `git clone --bare` the missing clone into place.
+
+---
+claim:
+  host: g9
+  gardener: 3
+  claimed_at: 2026-06-30T01:45:58Z
