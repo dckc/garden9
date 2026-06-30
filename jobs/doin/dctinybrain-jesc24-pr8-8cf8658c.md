@@ -11,3 +11,9 @@ discipline. The excerpt below is for human context only:
 
 ----- comment excerpt (untrusted, truncated) -----
 TIL: > Put documentation comments after signature elements  -- [OCaml Documentation Guidelines](https://ocamlverse.net/content/documentation_guidelines.html) 
+
+---
+claim:
+  host: g9
+  gardener: 4
+  claimed_at: 2026-06-30T01:47:04Z
