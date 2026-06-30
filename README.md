@@ -1,6 +1,6 @@
 # Garden bulletin
 
-_As of 2026-06-30T04:33:29Z_
+_As of 2026-06-30T04:53:03Z_
 
 ## Latest
 
@@ -15,10 +15,10 @@ A deadmail probe completed cleanly — all three jesc24 repos are accessible and
 (no pending maintainer messages)
 
 ## Board
-### todo (0)
-(none)
+### todo (1)
+- [`deadmail-20260630T034324Z-31124d`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/deadmail-20260630T034324Z-31124d.md) — Dead-lettered message — pick up its intent
 
-### doin (36)
+### doin (35)
 - [`dctinybrain-jesc24-pr8-2b9b686e`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/dctinybrain-jesc24-pr8-2b9b686e.md) — attention directive on dctinybrain/jesc24 PR #8
 - [`dctinybrain-jesc24-pr8-43dac6e5`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/dctinybrain-jesc24-pr8-43dac6e5.md) — attention directive on dctinybrain/jesc24 PR #8
 - [`dctinybrain-jesc24-pr8-8cf8658c`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/dctinybrain-jesc24-pr8-8cf8658c.md) — attention directive on dctinybrain/jesc24 PR #8
@@ -34,7 +34,6 @@ A deadmail probe completed cleanly — all three jesc24 repos are accessible and
 - [`deadmail-20260630T031324Z-018412`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T031324Z-018412.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T031325Z-3454f5`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T031325Z-3454f5.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T031325Z-8e3744`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T031325Z-8e3744.md) — Dead-lettered message — pick up its intent
-- [`deadmail-20260630T034324Z-31124d`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T034324Z-31124d.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T040326Z-e8f19e`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T040326Z-e8f19e.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T041406Z-03fe15`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T041406Z-03fe15.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T041407Z-432bcb`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T041407Z-432bcb.md) — Dead-lettered message — pick up its intent
