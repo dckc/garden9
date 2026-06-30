@@ -18,3 +18,9 @@ This eliminates the recurring `WARN: tracked clone ... is missing` that fires ev
 requires a human or agent to notice and manually `git clone --bare` the missing clone into place.
 
 <!-- garden-reaped: 1 -->
+
+---
+claim:
+  host: g9
+  gardener: 1
+  claimed_at: 2026-06-30T02:53:49Z
