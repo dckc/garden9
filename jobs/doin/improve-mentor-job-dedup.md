@@ -3,3 +3,9 @@ In `scripts/jobs/handlers/mentor-claude.sh`, the loop that parses JOB blocks cal
 Fix: after extracting `$base` from each JOB block, derive a slug prefix by taking the first three dash-segments (e.g., `improve-clone-keeper` from any `improve-clone-keeper-*`). Before calling `post-job.sh`, check whether any file matching `${prefix}-*.md` already exists under `jobs/todo/`, `jobs/doin/`, or `jobs/tada/` in the synced clone. If any match, log a skip and do not call `post-job.sh`. This is a deterministic grep/find with no LLM involvement and fits naturally in the existing parse loop in `mentor-claude.sh` (the `elif [ -n "$base" ]` / `ENDJOB` branch).
 
 Also consolidate the 8 existing duplicate todo files into one canonical entry (e.g., `improve-clone-keeper-reclone.md`) and delete the other seven so the board is clean for the gardener that picks it up.
+
+---
+claim:
+  host: g9
+  gardener: 3
+  claimed_at: 2026-06-30T01:46:38Z
