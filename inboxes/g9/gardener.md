@@ -201,3 +201,12 @@ Inspect via `git -C journal cat-file -p 610b417539b0754b99c71d69afa0de6ec8bb0891
 - Context: gardener-1 on g9: job 'dctinybrain-jesc24-pr8-8cf8658c' handler exited rc=1
 
 Inspect via `git -C journal cat-file -p 64ce9516ef63cd887c895598fe1ef700f72e3d4b`.
+
+## lane 0 -- handler-nonzero failure at 2026-06-30T02:53:49Z
+
+- PR: (none)
+- State: handler-nonzero
+- Transcript SHA: 44a23e4bcb6727025fc019d48888287226b004b9
+- Context: gardener-5 on g9: job 'self-heal-fix-garden-triager-agoric-labs-jesc24-triager-skip-missing-bare-clone' handler exited rc=1
+
+Inspect via `git -C journal cat-file -p 44a23e4bcb6727025fc019d48888287226b004b9`.
