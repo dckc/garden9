@@ -40,11 +40,14 @@ HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 source "$HERE/common.sh"
 GARDEN_TAG="clone-keeper"
 
-# Tracked bare clones, one per line: "<dir>|<remote>|<branch>". <dir> is relative
-# to GARDEN_ROOT (or absolute). Blank lines and #-comment lines are ignored.
+# Tracked bare clones, one per line: "<dir>|<remote>|<branch>[|<github-slug>]". <dir> is relative
+# to GARDEN_ROOT (or absolute). The optional 4th column is a GitHub slug (owner/repo); when set
+# and the bare clone is absent, it is auto-initialized via `git clone --bare
+# https://github.com/<slug>`. Without the slug, a missing clone logs WARN and skips.
+# Blank lines and #-comment lines are ignored.
 # Override GARDEN_TRACKED_CLONES (newline-separated, same format) for tests or to
 # track additional clones.
-: "${GARDEN_TRACKED_CLONES:=worktrees/endojs-endo.git|origin|master}"
+: "${GARDEN_TRACKED_CLONES:=worktrees/endojs-endo.git|origin|master|endojs/endo}"
 
 # Bounded ref fetch for an arbitrary remote/branch, mirroring common.sh's
 # journal_fetch (which is hardwired to the journal branch): each attempt is
@@ -72,17 +75,22 @@ bounded_fetch() {
 # Fetch + fast-forward one tracked clone. Self-contained: every failure path is
 # logged and returns 0, so one unreachable/diverged clone never aborts the rest.
 keep_clone() {
-  local dir="$1" remote="$2" branch="$3" abs="$1"
+  local dir="$1" remote="$2" branch="$3" slug="${4:-}" abs="$1"
   case "$abs" in /*) ;; *) abs="$GARDEN_ROOT/$dir" ;; esac
 
   if ! git -C "$abs" rev-parse --git-dir >/dev/null 2>&1; then
-    log "INFO: tracked clone $dir missing or not a git repo at $abs; attempting bare clone from $remote"
+    if [ -z "$slug" ]; then
+      log "WARN: tracked clone $dir missing or not a git repo at $abs; no GitHub slug configured, skipping"
+      return 0
+    fi
+    local url="https://github.com/$slug"
+    log "INFO: tracked clone $dir absent; initializing bare clone from $url"
     local clone_err
-    clone_err="$(git clone --bare "$remote" "$abs" 2>&1)" || {
-      log "ERROR: bare clone of $remote to $abs failed: $clone_err"
+    clone_err="$(git clone --bare "$url" "$abs" 2>&1)" || {
+      log "ERROR: bare clone of $url to $abs failed: $clone_err"
       return 0
     }
-    log "INFO: bare clone of $remote to $abs succeeded"
+    log "INFO: bare clone of $url to $abs succeeded"
   fi
 
   local old
@@ -125,9 +133,9 @@ keep_clone() {
   return 0
 }
 
-while IFS='|' read -r dir remote branch; do
+while IFS='|' read -r dir remote branch slug; do
   dir="${dir#"${dir%%[![:space:]]*}"}"   # ltrim
   [ -n "$dir" ] || continue
   case "$dir" in \#*) continue ;; esac
-  keep_clone "$dir" "${remote:-origin}" "${branch:-master}"
+  keep_clone "$dir" "${remote:-origin}" "${branch:-master}" "${slug:-}"
 done <<< "$GARDEN_TRACKED_CLONES"
