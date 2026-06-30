@@ -1,10 +1,10 @@
 # Garden bulletin
 
-_As of 2026-06-30T03:54:03Z_
+_As of 2026-06-30T03:55:58Z_
 
 ## Latest
 
-Two gardener tasks landed: `improve-triager-skip-on-missing-clone` and `improve-clone-keeper-auto-reclone-missing` both completed, continuing a cluster of hardening work on `clone-keeper.sh` and `triager.sh` against missing bare clones. The board remains busy — roughly a dozen more clone-keeper improvement variants are still claimed in `doin`, along with several self-heal triager fixes and a batch of attention directives against `dctinybrain/jesc24` PR #8 that have yet to resolve. A deadmail from earlier this morning (`20260630T024255Z`) also closed out. The two long-parked PRs on `agoric-labs/dapp-stake-control` ([#54](https://github.com/agoric-labs/dapp-stake-control/pull/54), [#55](https://github.com/agoric-labs/dapp-stake-control/pull/55)) remain untouched at 384 days.
+One more deadmail arrived since the last bulletin — essentially no other movement. The doin queue remains congested: six attention directives and a review directive for [dctinybrain/jesc24#8](https://github.com/dctinybrain/jesc24/pull/8) are piling up unclaimed alongside eleven deadmails (all timestamped today) and a cluster of nine clone-keeper hardening jobs. The triager's skip-on-missing-clone fix and the auto-reclone-missing clone-keeper improvement are both in tada, so some self-heal groundwork did complete, but the backlog of unresolved deadmails is worth a look — repeated dead-lettering usually signals a delivery or handler misconfiguration.
 
 ## Parked for maintainer feedback
 
@@ -18,7 +18,7 @@ Two gardener tasks landed: `improve-triager-skip-on-missing-clone` and `improve-
 ### todo (0)
 (none)
 
-### doin (32)
+### doin (33)
 - [`dctinybrain-jesc24-pr8-2b9b686e`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/dctinybrain-jesc24-pr8-2b9b686e.md) — attention directive on dctinybrain/jesc24 PR #8
 - [`dctinybrain-jesc24-pr8-43dac6e5`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/dctinybrain-jesc24-pr8-43dac6e5.md) — attention directive on dctinybrain/jesc24 PR #8
 - [`dctinybrain-jesc24-pr8-4ac3221c`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/dctinybrain-jesc24-pr8-4ac3221c.md) — attention directive on dctinybrain/jesc24 PR #8
@@ -36,6 +36,7 @@ Two gardener tasks landed: `improve-triager-skip-on-missing-clone` and `improve-
 - [`deadmail-20260630T031325Z-3454f5`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T031325Z-3454f5.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T031325Z-8e3744`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T031325Z-8e3744.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T034324Z-31124d`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T034324Z-31124d.md) — Dead-lettered message — pick up its intent
+- [`deadmail-20260630T035322Z-1d8a06`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T035322Z-1d8a06.md) — Dead-lettered message — pick up its intent
 - [`improve-clone-keeper-auto-bootstrap`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-auto-bootstrap.md) — In scripts/jobs/clone-keeper.sh, the keep_clone function currently logs
 - [`improve-clone-keeper-auto-init`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-auto-init.md) — In scripts/jobs/clone-keeper.sh, extend the GARDEN_TRACKED_CLONES entry forma...
 - [`improve-clone-keeper-auto-reclone`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-auto-reclone.md) — In scripts/jobs/clone-keeper.sh, the keep_clone function (lines 78-81) logs W...
