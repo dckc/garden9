@@ -29,7 +29,7 @@ GARDEN_TAG="triager/$slug"
 fleet_draining && { log "fleet draining; skipping"; exit 0; }
 
 BARE="$GARDEN_REPOS/$slug.git"
-[ -d "$BARE" ] || die "no bare clone at $BARE (clone the repo first)"
+[ -d "$BARE" ] || { log "no bare clone at $BARE; skipping until clone-keeper creates it"; exit 0; }
 
 git --git-dir="$BARE" fetch -q --all --prune || die "fetch failed for $slug"
 
