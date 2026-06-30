@@ -1,10 +1,10 @@
 # Garden bulletin
 
-_As of 2026-06-30T08:45:38Z_
+_As of 2026-06-30T08:54:31Z_
 
 ## Latest
 
-A deadmail probe completed cleanly — all three jesc24 repos are accessible and the probe passed. Work on [dctinybrain/jesc24#8](https://github.com/dctinybrain/jesc24/pull/8) is active, with four jobs (three attention directives and a review directive) still claimed in doin and a fresh monitor-auth journal entry filed. The notable signal this cycle is a large backpressure wave: roughly twenty jobs — the entire batch of `improve-clone-keeper-*` hardening tasks, the triager self-heals for missing bare clones, `improve-mentor-job-dedup`, additional PR #8 attention directives, and a deadmail — were released from doin back to todo, indicating gardeners claimed but could not complete them. The triager self-heal jobs implicate a missing bare clone as the likely root cause blocking the wider clone-keeper and triager work; those jobs remain open and unresolved.
+The board's `doin` queue is saturated with 50 dead-lettered messages accumulated throughout today, all awaiting intent recovery — this volume suggests a systemic delivery failure rather than isolated drops and warrants a look at the deadmail root cause. On the productive side, `improve-triager-missing-clone-skip` closed out cleanly (the gardener recognized commit `b5b340e45` had already landed the fix) and a new job `improve-clone-keeper-url-autoinit` was claimed to extend clone-keeper with URL auto-initialization. Work in `dctinybrain/jesc24` also advanced, with an ECMA-262 provenance note committed to `theories/jessie/quasi_jessie.v` against PR #8 in that fork.
 
 ## Parked for maintainer feedback
 
@@ -18,10 +18,8 @@ A deadmail probe completed cleanly — all three jesc24 repos are accessible and
 ### todo (0)
 (none)
 
-### doin (52)
-- [`deadmail-20260630T031324Z-018412`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T031324Z-018412.md) — Dead-lettered message — pick up its intent
+### doin (50)
 - [`deadmail-20260630T031325Z-3454f5`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T031325Z-3454f5.md) — Dead-lettered message — pick up its intent
-- [`deadmail-20260630T031325Z-8e3744`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T031325Z-8e3744.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T034324Z-31124d`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T034324Z-31124d.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T040326Z-e8f19e`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T040326Z-e8f19e.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T041406Z-03fe15`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T041406Z-03fe15.md) — Dead-lettered message — pick up its intent
@@ -65,20 +63,20 @@ A deadmail probe completed cleanly — all three jesc24 repos are accessible and
 - [`deadmail-20260630T073410Z-8b8da3`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T073410Z-8b8da3.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T073412Z-f24743`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T073412Z-f24743.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T073414Z-ad4265`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T073414Z-ad4265.md) — Dead-lettered message — pick up its intent
-- [`deadmail-20260630T074326Z-fe5757`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T074326Z-fe5757.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T074329Z-260d32`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T074329Z-260d32.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T075318Z-09e621`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T075318Z-09e621.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T080353Z-ac4f84`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T080353Z-ac4f84.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T082027Z-c8cf0e`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T082027Z-c8cf0e.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T084317Z-a93140`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T084317Z-a93140.md) — Dead-lettered message — pick up its intent
+- [`improve-clone-keeper-url-autoinit`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-url-autoinit.md) — Extend the tracked-clones spec in scripts/jobs/clone-keeper.sh with an option...
 
-### tada (14)
+### tada (16)
+- [`improve-triager-missing-clone-skip`](https://github.com/kriskowal/garden/blob/journal2/jobs/tada/improve-triager-missing-clone-skip.md) — The work is already done. Commit b5b340e45 ("triager: skip cleanly when bare ...
+- [`deadmail-20260630T074326Z-fe5757`](https://github.com/kriskowal/garden/blob/journal2/jobs/tada/deadmail-20260630T074326Z-fe5757.md) — The maintainer inbox is still unavailable (no active liaison session), so my ...
 - [`dctinybrain-jesc24-pr8-4ac3221c`](https://github.com/kriskowal/garden/blob/journal2/jobs/tada/dctinybrain-jesc24-pr8-4ac3221c.md) — Added ECMA-262 provenance note to theories/jessie/quasi_jessie.v in commit 18...
 - [`deadmail-20260630T035322Z-1d8a06`](https://github.com/kriskowal/garden/blob/journal2/jobs/tada/deadmail-20260630T035322Z-1d8a06.md) — All three repos are accessible and the probe passes. Here is the completion r...
 - [`improve-triager-skip-on-missing-clone`](https://github.com/kriskowal/garden/blob/journal2/jobs/tada/improve-triager-skip-on-missing-clone.md) — Completion report:
-- [`improve-clone-keeper-auto-reclone-missing`](https://github.com/kriskowal/garden/blob/journal2/jobs/tada/improve-clone-keeper-auto-reclone-missing.md) — Push succeeded on first attempt.
-- [`deadmail-20260630T024255Z-6329b9`](https://github.com/kriskowal/garden/blob/journal2/jobs/tada/deadmail-20260630T024255Z-6329b9.md) — The maintainer inbox is still unavailable, creating another deadmail (2026063...
-- … and 9 more
+- … and 11 more
 
 ## Plan queue (parked — not claimable until promoted)
 ### awaiting go-ahead (maintainer authorization)
