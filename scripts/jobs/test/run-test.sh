@@ -1117,6 +1117,33 @@ git clone -q --single-branch --branch "$BRANCH" "$DBARE" "$DV"
 njob2=$(ls -1 "$DV/jobs/todo" | grep -c "^deadmail-${deadid}\.md$" || true)
 { [ "$hb" = "$ha" ] && [ "$njob2" -eq 1 ]; } && ok "re-scan is idempotent (no duplicate job, no new commit)" || bad "re-scan not idempotent (head $hb→$ha job=$njob2)"
 rm -rf "$DV"
+
+# (4) POISON-cycle guard: a dead-lettered POISON notice about a deadmail- job must
+#     be retired without promotion.  Promoting it would restart the loop:
+#     POISON → dead-letter → new deadmail job → fails → POISON → …
+poison_msgid="poison-cycle-$$"
+PSEED="$TR/dm-poison-seed"
+git clone -q --single-branch --branch "$BRANCH" "$DBARE" "$PSEED"
+{
+  printf 'to: maintainer\nfrom: reaper\n\n'
+  printf 'POISON job dropped from the board after 5 requeue cycles on dmhost.\n'
+  printf 'Original job base: deadmail-some-old-msg\n\n'
+  printf '--- original job body ---\nsome content\n'
+} > "$PSEED/inbox/dead/$poison_msgid.md"
+git -C "$PSEED" add -A
+git -C "$PSEED" "${git_id[@]}" commit -q -m "seed POISON dead-mail"
+git -C "$PSEED" push -q origin "HEAD:$BRANCH"
+rm -rf "$PSEED"
+
+dm_env "$JOBS/deadmail.sh" >/dev/null 2>&1
+git clone -q --single-branch --branch "$BRANCH" "$DBARE" "$DV"
+n_poison_job=$(ls -1 "$DV/jobs/todo" | grep -c "^deadmail-poison-cycle-" || true)
+n_poison_dead=$(ls -1 "$DV/inbox/dead" | grep -c "^$poison_msgid" || true)
+[ "$n_poison_job" -eq 0 ] && ok "POISON-cycle dead-letter not promoted to a new deadmail job" \
+  || bad "POISON-cycle guard missing: $n_poison_job job(s) promoted"
+[ "$n_poison_dead" -eq 0 ] && ok "POISON-cycle dead-letter entry retired without promotion" \
+  || bad "POISON-cycle dead-letter not retired ($n_poison_dead entries remain)"
+rm -rf "$DV"
 unset JOURNAL_REMOTE
 
 # ============================================================================

@@ -74,6 +74,25 @@ for f in $(list_jobs "$DIR" inbox/dead); do
 
   to="$(sed -n 's/^to:[[:space:]]*//p' "$src" | head -1)"
 
+  # Guard: a POISON report whose original job was itself a deadmail- job is a
+  # terminal notice; promoting it recreates the loop (POISON → dead-letter →
+  # new deadmail job → POISON → …). Retire the entry and log; do not promote.
+  if grep -q '^Original job base: deadmail-' "$src"; then
+    orig_base="$(sed -n 's/^Original job base: //p' "$src" | head -1)"
+    log "WARN dead-letter $msgid is a POISON notice about deadmail job '$orig_base'; retiring without promotion to break the cycle"
+    for attempt in $(seq 1 20); do
+      sync_clone "$DIR"
+      [ -e "$DIR/inbox/dead/$f" ] || break
+      git -C "$DIR" rm -q "inbox/dead/$f"
+      if commit_and_push "$DIR" "deadmail: retired POISON-cycle dead-letter $msgid ($GARDEN_HOST)"; then
+        break
+      fi
+      log "retire of POISON-cycle dead-letter $msgid lost a push race (attempt $attempt); retrying"
+      backoff "$attempt"
+    done
+    continue
+  fi
+
   body="$(mktemp "${TMPDIR:-/tmp}/garden-deadmail.XXXXXX")"
   {
     printf '# Dead-lettered message — pick up its intent\n\n'
