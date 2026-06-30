@@ -1,6 +1,6 @@
 # Garden bulletin
 
-_As of 2026-06-30T04:07:31Z_
+_As of 2026-06-30T04:07:47Z_
 
 ## Latest
 
@@ -15,10 +15,10 @@ A deadmail probe completed cleanly — all three jesc24 repos are accessible and
 (no pending maintainer messages)
 
 ## Board
-### todo (1)
-- [`self-heal-fix-garden-triager-dctinybrain-jesc24-repos-default-points-worktrees`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/self-heal-fix-garden-triager-dctinybrain-jesc24-repos-default-points-worktrees.md) — Fix the wrong GARDEN_REPOS default in scripts/jobs/triager.sh (line 25) and s...
+### todo (0)
+(none)
 
-### doin (31)
+### doin (32)
 - [`dctinybrain-jesc24-pr8-2b9b686e`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/dctinybrain-jesc24-pr8-2b9b686e.md) — attention directive on dctinybrain/jesc24 PR #8
 - [`dctinybrain-jesc24-pr8-43dac6e5`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/dctinybrain-jesc24-pr8-43dac6e5.md) — attention directive on dctinybrain/jesc24 PR #8
 - [`dctinybrain-jesc24-pr8-8cf8658c`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/dctinybrain-jesc24-pr8-8cf8658c.md) — attention directive on dctinybrain/jesc24 PR #8
@@ -49,6 +49,7 @@ A deadmail probe completed cleanly — all three jesc24 repos are accessible and
 - [`improve-clone-keeper-self-reclone`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-clone-keeper-self-reclone.md) — In scripts/jobs/clone-keeper.sh, extend GARDEN_TRACKED_CLONES from a 3-column...
 - [`improve-mentor-job-dedup`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/improve-mentor-job-dedup.md) — In scripts/jobs/handlers/mentor-claude.sh, the loop that parses JOB blocks ca...
 - [`self-heal-fix-garden-triager-agoric-labs-jesc24-triager-skip-missing-bare-clone`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/self-heal-fix-garden-triager-agoric-labs-jesc24-triager-skip-missing-bare-clone.md) — In scripts/jobs/triager.sh line 32, change the hard die on a missing bare clo...
+- [`self-heal-fix-garden-triager-dctinybrain-jesc24-repos-default-points-worktrees`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/self-heal-fix-garden-triager-dctinybrain-jesc24-repos-default-points-worktrees.md) — Fix the wrong GARDEN_REPOS default in scripts/jobs/triager.sh (line 25) and s...
 - [`self-heal-fix-garden-triager-repos-default-wrong-dir`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/self-heal-fix-garden-triager-repos-default-wrong-dir.md) — scripts/jobs/triager.sh line 25 defaults GARDEN_REPOS to $GARDEN_ROOT/repos, ...
 
 ### tada (14)
