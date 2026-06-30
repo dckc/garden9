@@ -13,3 +13,9 @@ the journal. The fleet-draining guard on line 29 already shows the intended idio
 for a precondition that doesn't require noise. This change makes the triager inert (not Failed)
 until the operator runs the clone, consistent with the skip-cleanly pattern used throughout the
 garden scripts (see recent commits: "skip cleanly when tip has no library/topics", etc.).
+
+---
+claim:
+  host: g9
+  gardener: 2
+  claimed_at: 2026-06-30T01:46:47Z
