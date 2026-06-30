@@ -579,3 +579,12 @@ Inspect via `git -C journal cat-file -p a44f7a18df719256960d289467fb5c6f0bce50c4
 - Context: gardener-2 on g9: job 'self-heal-fix-garden-triager-agoric-labs-jesc24-triager-skip-missing-bare-clone' handler exited rc=1
 
 Inspect via `git -C journal cat-file -p 47b58173853077e7cdcddc39c3d418ba5ec56bfe`.
+
+## lane 0 -- handler-nonzero failure at 2026-06-30T05:14:28Z
+
+- PR: (none)
+- State: handler-nonzero
+- Transcript SHA: 83f236383f1457962006e16620ae2481f08e9ae3
+- Context: gardener-5 on g9: job 'improve-clone-keeper-reclone' handler exited rc=1
+
+Inspect via `git -C journal cat-file -p 83f236383f1457962006e16620ae2481f08e9ae3`.
