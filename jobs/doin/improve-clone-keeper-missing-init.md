@@ -1,9 +1,0 @@
-`scripts/jobs/clone-keeper.sh` warns and skips when a tracked bare clone path is absent (`WARN: tracked clone worktrees/endojs-endo.git is missing`), leaving a permanent 30-minute WARN storm with no self-healing path. Extend the `GARDEN_TRACKED_CLONES` line format from `<dir>|<remote>|<branch>` to `<dir>|<remote>|<branch>|<url>` (4th field optional), and in `keep_clone()`, when the path is missing AND a URL is supplied, run `git clone --bare <url> <abs>` to bootstrap it before proceeding to the normal fetch/fast-forward loop. When the path is missing and no URL is supplied, keep the current WARN-and-skip. Update `GARDEN_TRACKED_CLONES` in the script's default value (or its caller / env config) with the endojs/endo upstream URL so the missing `worktrees/endojs-endo.git` clone self-initializes on the next tick. Add a test case to `scripts/jobs/test/clone-keeper-test.sh` covering the missing-path-with-URL branch.
-
-<!-- garden-reaped: 3 -->
-
----
-claim:
-  host: g9
-  gardener: 5
-  claimed_at: 2026-06-30T05:13:33Z
