@@ -1,10 +1,10 @@
 # Garden bulletin
 
-_As of 2026-06-30T00:51:25Z_
+_As of 2026-06-30T01:21:03Z_
 
 ## Latest
 
-One new job arrived since the last bulletin: `improve-clone-keeper-self-reclone` was posted to the todo queue, joining nine other `improve-clone-keeper-*` variants already waiting there. The board is otherwise idle — nothing is in flight — and all recent completions were garden self-heal confirmations (noop checks verifying already-landed fixes) and deadmail housekeeping. The accumulating clone-keeper backlog has no active claimant; if the maintainer wants that work to advance, it may need a manual nudge or a gardener brought up.
+One new job posted to the board since the last bulletin: `improve-clone-keeper-self-init`, joining a queue of ten other `improve-clone-keeper-*` items already parked in todo — all targeting hardening of `scripts/jobs/clone-keeper.sh` against missing or uninitialized bare clones. Nothing is in flight (doin is empty). Recent completions confirm that the self-healing fixes for `regenerate-sections-index` and `regenerate-topics-counts` were already landed and required no further action, and a pair of deadmail entries cleared. The two [dapp-stake-control](https://github.com/agoric-labs/dapp-stake-control) PRs ([#54](https://github.com/agoric-labs/dapp-stake-control/pull/54), [#55](https://github.com/agoric-labs/dapp-stake-control/pull/55)) remain parked awaiting your review at 383 days.
 
 ## Parked for maintainer feedback
 
@@ -15,16 +15,17 @@ One new job arrived since the last bulletin: `improve-clone-keeper-self-reclone`
 (no pending maintainer messages)
 
 ## Board
-### todo (11)
+### todo (12)
 - [`improve-clone-keeper-auto-bootstrap`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-auto-bootstrap.md) — In scripts/jobs/clone-keeper.sh, the keep_clone function currently logs
 - [`improve-clone-keeper-auto-init`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-auto-init.md) — In scripts/jobs/clone-keeper.sh, extend the GARDEN_TRACKED_CLONES entry forma...
 - [`improve-clone-keeper-auto-reclone`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-auto-reclone.md) — In scripts/jobs/clone-keeper.sh, the keep_clone function (lines 78-81) logs W...
 - [`improve-clone-keeper-bootstrap-missing-bare-clone`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-bootstrap-missing-bare-clone.md) — Harden scripts/jobs/clone-keeper.sh so a missing tracked bare clone is determ...
 - [`improve-clone-keeper-missing-init`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-missing-init.md) — scripts/jobs/clone-keeper.sh warns and skips when a tracked bare clone path i...
-- [`improve-clone-keeper-reclone-missing`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-reclone-missing.md) — In scripts/jobs/clone-keeper.sh, the keep_clone function (line 78-81) warns and
 - [`improve-clone-keeper-reclone`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-reclone.md) — Harden scripts/jobs/clone-keeper.sh against a permanently missing bare clone.
+- [`improve-clone-keeper-reclone-missing`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-reclone-missing.md) — In scripts/jobs/clone-keeper.sh, the keep_clone function (line 78-81) warns and
 - [`improve-clone-keeper-recreate-missing`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-recreate-missing.md) — scripts/ clone-keeper (scripts/jobs/clone-keeper.sh or equivalent) currently
 - [`improve-clone-keeper-self-heal`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-self-heal.md) — In scripts/jobs/clone-keeper.sh, extend the GARDEN_TRACKED_CLONES line format
+- [`improve-clone-keeper-self-init`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-self-init.md) — In scripts/jobs/clone-keeper.sh, extend the GARDEN_TRACKED_CLONES entry forma...
 - [`improve-clone-keeper-self-reclone`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-clone-keeper-self-reclone.md) — In scripts/jobs/clone-keeper.sh, extend GARDEN_TRACKED_CLONES from a 3-column...
 - [`improve-mentor-job-dedup`](https://github.com/kriskowal/garden/blob/journal2/jobs/todo/improve-mentor-job-dedup.md) — In scripts/jobs/handlers/mentor-claude.sh, the loop that parses JOB blocks ca...
 
