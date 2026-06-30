@@ -27,3 +27,9 @@ Why: `worktrees/endojs-endo.git` is currently absent, causing a WARN on every
 deterministic, needs no LLM judgment, and removes the manual step entirely.
 
 <!-- garden-reaped: 4 -->
+
+---
+claim:
+  host: g9
+  gardener: 5
+  claimed_at: 2026-06-30T06:23:15Z
