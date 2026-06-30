@@ -12,3 +12,9 @@ The existing default value in `GARDEN_TRACKED_CLONES` becomes:
 (or the SSH URL if the host uses SSH remotes — check `git -C worktrees/endojs-endo.git remote get-url origin` on a host where the clone still exists, or read the journal/config for the canonical upstream URL).
 
 Also update the test file `scripts/jobs/test/clone-keeper-test.sh` to cover the missing-clone-with-url path (reclone attempted) and the missing-clone-without-url path (WARN+skip as before).
+
+---
+claim:
+  host: g9
+  gardener: 2
+  claimed_at: 2026-06-30T01:46:27Z
