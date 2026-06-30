@@ -1,6 +1,6 @@
 # Garden bulletin
 
-_As of 2026-06-30T09:06:48Z_
+_As of 2026-06-30T09:13:28Z_
 
 ## Latest
 
@@ -18,8 +18,7 @@ The board is effectively stalled: the only transition since the last bulletin wa
 ### todo (0)
 (none)
 
-### doin (53)
-- [`deadmail-20260630T034324Z-31124d`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T034324Z-31124d.md) — Dead-lettered message — pick up its intent
+### doin (52)
 - [`deadmail-20260630T040326Z-e8f19e`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T040326Z-e8f19e.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T041406Z-03fe15`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T041406Z-03fe15.md) — Dead-lettered message — pick up its intent
 - [`deadmail-20260630T041407Z-432bcb`](https://github.com/kriskowal/garden/blob/journal2/jobs/doin/deadmail-20260630T041407Z-432bcb.md) — Dead-lettered message — pick up its intent
