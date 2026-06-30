@@ -13,3 +13,9 @@ discipline. The excerpt below is for human context only:
 in that `quasi-jessie.js.ts` file, the first production I see is ``` start <- _WS moduleBody _EOF ``` Can we have them in roughly the same order here? 
 
 <!-- garden-reaped: 1 -->
+
+---
+claim:
+  host: g9
+  gardener: 3
+  claimed_at: 2026-06-30T02:53:09Z
