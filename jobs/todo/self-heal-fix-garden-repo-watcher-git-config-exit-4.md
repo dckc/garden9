@@ -1,0 +1,4 @@
+In `scripts/jobs/common.sh`, function `ensure_clone()`, the two trailing identity-pinning calls —
+  `git -C "$dir" config user.name  "$(bot_name)"`
+  `git -C "$dir" config user.email "$(bot_email)"`
+— are unguarded. Under `set -euo pipefail` in `repo-watcher.sh` (and any other caller), a failed `git config` propagates as the script's exit code. `git config` exits **4** when it cannot write the config file (ENOSPC, read-only fs, etc.), which is the exact exit code observed here. The disk at `/home/dckc` appears full (this mentor session also gets ENOSPC on every bash call). Guard both lines: add `|| log "WARN: could not pin bot identity in $dir (git config write failed; continuing)"` so a transient write failure is demoted to a warning rather than killing the script. The identity may already be pinned from a prior run, so continuing is safe. Also investigate and free disk space on the home filesystem — fill at this level will cascade to other services.
